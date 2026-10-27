@@ -12,7 +12,7 @@ test("all requested sections, original logo, honest configuration and no broken 
   expect(response.status()).toBe(200);
   await expect(page).toHaveTitle("YANA — Make learning take flight.");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
-    "Make learningtake flight.",
+    /Learn it\.\s*Explore it\.\s*Take flight\./,
   );
   for (const section of ["about", "product", "details", "gallery", "contact"])
     await expect(page.locator(`#${section}`)).toBeAttached();
@@ -25,10 +25,12 @@ test("all requested sections, original logo, honest configuration and no broken 
   expect(await page.locator(".unconfirmed").count()).toBe(4);
   await page.evaluate(async () => {
     // Force off-screen images to load for this check; production remains lazy.
-    await Promise.all([...document.images].map((image) => {
-      image.loading = "eager";
-      return image.decode();
-    }));
+    await Promise.all(
+      [...document.images].map((image) => {
+        image.loading = "eager";
+        return image.decode();
+      }),
+    );
   });
   for (const image of await page.locator("img").all())
     expect(
@@ -239,13 +241,15 @@ test("capture the finished layout for visual review", async ({
 }, testInfo) => {
   await page.goto("/");
   await page.evaluate(() => document.fonts.ready);
-  await page.locator('#gallery').scrollIntoViewIfNeeded();
+  await page.locator("#gallery").scrollIntoViewIfNeeded();
   await page.evaluate(async () => {
-    await Promise.all([...document.images].map(image => {
-      image.loading = 'eager';
-      return image.decode();
-    }));
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    await Promise.all(
+      [...document.images].map((image) => {
+        image.loading = "eager";
+        return image.decode();
+      }),
+    );
+    window.scrollTo({ top: 0, behavior: "instant" });
   });
   await page.screenshot({
     path: testInfo.outputPath(`${testInfo.project.name}.png`),
@@ -316,4 +320,39 @@ test("GitHub Pages entry point matches the tested production build", async () =>
   await expect(
     readFile(new URL("../.nojekyll", import.meta.url), "utf8"),
   ).resolves.toBe("");
+});
+
+test("supplied logo is available as browser and Apple touch icons", async ({
+  page,
+  request,
+}) => {
+  await page.goto("/");
+  await expect(
+    page.locator('link[rel="icon"][type="image/png"]'),
+  ).toHaveAttribute("href", "favicon-32.png");
+  await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveAttribute(
+    "href",
+    "apple-touch-icon.png",
+  );
+  for (const [file, size] of [
+    ["favicon-32.png", 32],
+    ["apple-touch-icon.png", 180],
+  ]) {
+    const response = await request.get(`/${file}`);
+    expect(response.status()).toBe(200);
+    expect(response.headers()["content-type"]).toBe("image/png");
+    const bytes = await response.body();
+    expect(bytes.subarray(0, 8).toString("hex")).toBe("89504e470d0a1a0a");
+    expect(bytes.readUInt32BE(16)).toBe(size);
+    expect(bytes.readUInt32BE(20)).toBe(size);
+    expect(
+      bytes.equals(await readFile(new URL(`../${file}`, import.meta.url))),
+    ).toBe(true);
+  }
+  const ico = await request.get("/favicon.ico");
+  expect(ico.status()).toBe(200);
+  expect(ico.headers()["content-type"]).toBe("image/x-icon");
+  const bytes = await ico.body();
+  expect(bytes.readUInt16LE(2)).toBe(1);
+  expect(bytes.readUInt16LE(4)).toBe(3);
 });

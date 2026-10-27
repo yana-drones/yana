@@ -10,6 +10,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import sharp from "sharp";
+import { writeFavicons } from "./favicon.mjs";
 
 export const root = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -153,6 +154,7 @@ export async function build() {
           /\.svg$/i.test(file)),
     );
   const logo = logoFile ? await imageAsset(logoFile, true) : null;
+  if (logoFile) await writeFavicons(resolveAsset(logoFile), output);
   const logoHtml = logo
     ? `<img src="${logo.src}"${logo.srcset ? ` srcset="${logo.srcset}" sizes="94px"` : ""} width="${logo.width}" height="${logo.height}" alt="YANA">`
     : '<span class="brand-wordmark">YANA</span>';
@@ -248,7 +250,7 @@ export async function build() {
     .replace("<!-- PRODUCT_MEDIA -->", product)
     .replace("<!-- GALLERY -->", galleryHtml);
   await writeFile(path.join(output, "index.html"), html);
-  for (const file of ["styles.css", "app.js"])
+  for (const file of ["styles.css", "hero.css", "app.js"])
     await copyFile(path.join(root, file), path.join(output, file));
   await mkdir(path.join(output, "fonts"), { recursive: true });
   for (const file of await readdir(path.join(root, "fonts")))
@@ -278,6 +280,14 @@ export async function build() {
       await unlink(path.join(root, "media", file));
   }
   await writeFile(path.join(root, "index.html"), html);
+  if (logoFile) {
+    for (const file of [
+      "favicon.ico",
+      "favicon-32.png",
+      "apple-touch-icon.png",
+    ])
+      await copyFile(path.join(output, file), path.join(root, file));
+  }
   await writeFile(path.join(root, ".nojekyll"), "");
   console.log(
     `Built YANA: ${logo ? "supplied logo" : "text wordmark"}, ${photoNumber} photos, ${videoNumber} videos. ${writtenFiles.size} media files.`,
