@@ -30,8 +30,8 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 const email = document.documentElement.dataset.email || "hello@naadix.xyz";
 const enquiries = {
   workshop: {
-    subject: "YANA — Workshop enquiry",
-    body: "Hello YANA,\n\nWe would like to discuss a drone-making or drone-development workshop.\n\nContact name:\nInstitution / club:\nLocation:\nPreferred dates:\nExpected group size and experience:\nLearning goals:\nVenue and equipment available:\n\nPlease share a proposed agenda, facilitator details, responsibilities and an itemised quote.\n\nThank you.",
+    subject: "YANA Drone Workshop Enquiry",
+    body: "Hello YANA,\n\nWe would like to enquire about a hands-on drone workshop.\n\nInstitution name:\nCity:\nParticipant age group:\nExpected number of participants:\nPreferred date:\nLearning goals or questions:\n\nPlease share a proposed workshop outline and confirm the activities, facilitator, equipment and arrangements with us.\n\nThank you.",
   },
   partnership: {
     subject: "YANA — Workshop partnership enquiry",

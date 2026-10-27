@@ -240,6 +240,66 @@
     "category": "Power and propulsion"
   },
   {
+    "slug": "sitl-simulation-explained",
+    "title": "What software-in-the-loop drone simulation can teach",
+    "description": "Understand SITL as flight software interacting with a model, and choose learning questions it can answer.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "simulation-reproducibility-checklist",
+    "title": "Make a drone simulation experiment reproducible",
+    "description": "Record versions, models, initial conditions and analysis choices so another student can evaluate a simulation result.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "sitl-hitl-differences",
+    "title": "SITL and HITL: where the real flight controller enters the loop",
+    "description": "Compare software-in-the-loop and hardware-in-the-loop using system boundaries and evidence rather than labels.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "reading-drone-log-plots",
+    "title": "Read a drone log plot before diagnosing the aircraft",
+    "description": "Check field definitions, axes, timestamps and evidence boundaries before interpreting a drone recording.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "telemetry-units-and-timestamps",
+    "title": "Telemetry units and timestamps: fix interpretation before plotting",
+    "description": "Create a telemetry field dictionary and distinguish units, scaling, clock origins and unavailable values.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "sensor-sampling-aliasing",
+    "title": "Sampling and aliasing: why a slow plot can hide fast vibration",
+    "description": "Explore sampling ambiguity with a paper rotating arrow and distinguish sample rate from display refresh rate.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "drone-vibration-log-reading",
+    "title": "Read drone vibration evidence without jumping to a repair",
+    "description": "Distinguish processed vibration, clipping and frequency information using supplied logs and a cautious evidence table.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "drone-power-monitor-readings",
+    "title": "Read voltage, current and consumed charge from a drone power monitor",
+    "description": "Understand power-monitor location, units and integration using a fictional data worksheet.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "telemetry-packet-sequence",
+    "title": "Telemetry packet gaps: distinguish missing data from a stopped system",
+    "description": "Interpret message sequence, identity and data freshness with a paper network exercise.",
+    "category": "Simulation and data"
+  },
+  {
+    "slug": "drone-experiment-report",
+    "title": "Write a drone experiment report that another student can assess",
+    "description": "Turn a classroom drone investigation into a clear question, method, evidence, limitation and next test.",
+    "category": "Simulation and data"
+  },
+  {
     "slug": "organise-college-drone-workshop",
     "title": "How to organise a college drone-building workshop",
     "description": "A practical planning sequence for a college drone workshop, from learning goals and equipment to responsibilities and follow-up.",
@@ -478,5 +538,65 @@
     "title": "How to request a useful educational drone quote from YANA",
     "description": "Share your educational goals, users and resource questions so YANA can discuss a scoped configuration and itemised proposal.",
     "category": "Buying an educational drone"
+  },
+  {
+    "slug": "start-drone-learning-club",
+    "title": "Start a drone-learning group with a clear first project",
+    "description": "Give a new drone club a bounded purpose, shared records and a manageable introductory task before expanding its ambitions.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "shared-drone-equipment-access",
+    "title": "Manage shared access to educational drone equipment",
+    "description": "Create a booking and return process that links equipment access to agreed tasks, supervision and accurate records.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "drone-club-onboarding",
+    "title": "Create a useful onboarding path for new drone club members",
+    "description": "Introduce new members to the club purpose, equipment records and a supervised first task without overwhelming them with jargon.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "drone-club-inventory-system",
+    "title": "Keep a practical inventory for shared drone components",
+    "description": "Track component identity, ownership, location and review status so shared equipment remains understandable across club projects.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "drone-club-maintenance-record",
+    "title": "Maintain a useful condition and change log for club drones",
+    "description": "Record observations, approved changes and unresolved issues so future learners can understand the state of shared drone equipment.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "drone-club-mentorship",
+    "title": "Build a mentorship process for a drone-learning club",
+    "description": "Help experienced members support beginners through explanation, evidence checks and clear escalation boundaries.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "drone-club-project-selection",
+    "title": "Choose a drone club project your members can finish",
+    "description": "Select club projects by learning value, access, evidence and handover needs rather than novelty alone.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "showcase-student-drone-projects",
+    "title": "Showcase student drone work without overstating results",
+    "description": "Present authentic project photos, diagrams and evidence with readable explanations and honest limits.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "drone-club-year-handover",
+    "title": "Hand over a drone club when student coordinators change",
+    "description": "Transfer equipment records, open questions, institutional contacts and project context so the next team can continue responsibly.",
+    "category": "Clubs and makerspaces"
+  },
+  {
+    "slug": "drone-partnership-enquiry-brief",
+    "title": "Plan a drone workshop partnership with YANA",
+    "description": "Prepare a partnership enquiry for hands-on drone-making and development learning with clear host and delivery responsibilities.",
+    "category": "Clubs and makerspaces"
   }
 ]

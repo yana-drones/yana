@@ -28,7 +28,7 @@ After editing source or media, run `npm test`, commit the source **and all regen
 
 ## Pages and learning library
 
-- `/`: product introduction, continuously moving audience strip, prototype gallery, workshop partnership section and combined peach contact/footer area.
+- `/`: product introduction, continuously moving audience strip, a hands-on workshop section immediately after the product, prototype gallery and combined peach contact/footer area.
 - `/shop/`: the single educational quadcopter listing and quote request.
 - `/educational-drone/`: proposed F450 / Pixhawk 2.4.8 configuration, a specification status table and purchasing questions.
 - `/drone-workshops/` and `/partnerships/`: workshop planning and institutional partnership enquiries. An enquiry is not a confirmed booking.
@@ -36,6 +36,8 @@ After editing source or media, run `npm test`, commit the source **and all regen
 - `/blog/category/<topic>/`: ten topic hubs, with ten articles each.
 
 The learning library covers drone fundamentals, frames and mechanics, flight controllers, power and propulsion, simulation and data, workshop planning, college projects, teaching and learning, buying an educational drone, and clubs and makerspaces. Articles use a shared readable layout, contents links, practical activities, FAQs, references and related guides.
+
+The homepage workshop buttons link to `/drone-workshops/` and an email enquiry with the exact subject **YANA Drone Workshop Enquiry**, including without JavaScript. The workshop page presents components, quadcopter basics, assembly, electronics and flight safety as proposed topics subject to discussion. The prefilled email asks for institution name, city, participant age group, expected number and preferred date; it does not reserve a workshop or confirm flight activities.
 
 Edit the structured content in `content/technical-*.mjs` or `content/planning-*.mjs`. The two entry modules export the article collections. Each article needs a stable unique `slug`, `title`, `description`, `category`, `answer`, `sections`, `activity`, `faqs`, `sources` and optional `related` slugs. Keep titles, descriptions and substantive advice distinct. Verify technical claims against primary documentation. Never treat generic component documentation as a confirmed YANA package specification. Run `npm run build` after editing; changes to URLs also need redirects if a page has already been indexed.
 

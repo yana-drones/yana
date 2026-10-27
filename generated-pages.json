@@ -1,7 +1,7 @@
 {
   "site": "https://yana-drones.github.io/yana/",
   "published": "2026-10-27",
-  "articleCount": 80,
+  "articleCount": 100,
   "pages": [
     {
       "route": "shop/",
@@ -20,8 +20,8 @@
     {
       "route": "drone-workshops/",
       "url": "https://yana-drones.github.io/yana/drone-workshops/",
-      "title": "Hands-on Drone Building Workshops for Students | YANA",
-      "description": "Plan a drone-making or development workshop with YANA. Discuss learning goals, professional-led training, equipment, venue and a tailored proposal.",
+      "title": "Hands-on Drone Workshops for Students and Teachers | YANA",
+      "description": "Discuss hands-on drone workshops for students, teachers, schools, colleges, academies and robotics clubs. Explore proposed topics and enquire with YANA.",
       "kind": "page"
     },
     {
@@ -43,6 +43,13 @@
       "url": "https://yana-drones.github.io/yana/blog/category/buying-an-educational-drone/",
       "title": "Buying an educational drone Guides | YANA",
       "description": "Practical buying an educational drone guides for educational drone learners and organisers. Explore clear explanations, activities and checklists.",
+      "kind": "page"
+    },
+    {
+      "route": "blog/category/clubs-and-makerspaces/",
+      "url": "https://yana-drones.github.io/yana/blog/category/clubs-and-makerspaces/",
+      "title": "Clubs and makerspaces Guides | YANA",
+      "description": "Practical clubs and makerspaces guides for educational drone learners and organisers. Explore clear explanations, activities and checklists.",
       "kind": "page"
     },
     {
@@ -78,6 +85,13 @@
       "url": "https://yana-drones.github.io/yana/blog/category/power-and-propulsion/",
       "title": "Power and propulsion Guides | YANA",
       "description": "Practical power and propulsion guides for educational drone learners and organisers. Explore clear explanations, activities and checklists.",
+      "kind": "page"
+    },
+    {
+      "route": "blog/category/simulation-and-data/",
+      "url": "https://yana-drones.github.io/yana/blog/category/simulation-and-data/",
+      "title": "Simulation and data Guides | YANA",
+      "description": "Practical simulation and data guides for educational drone learners and organisers. Explore clear explanations, activities and checklists.",
       "kind": "page"
     },
     {
@@ -442,7 +456,7 @@
       "kind": "article",
       "slug": "motor-kv-explained",
       "category": "Power and propulsion",
-      "wordCount": 512
+      "wordCount": 515
     },
     {
       "route": "blog/propeller-diameter-pitch/",
@@ -495,6 +509,106 @@
       "wordCount": 510
     },
     {
+      "route": "blog/sitl-simulation-explained/",
+      "url": "https://yana-drones.github.io/yana/blog/sitl-simulation-explained/",
+      "title": "What software-in-the-loop drone simulation can teach | YANA",
+      "description": "Understand SITL as flight software interacting with a model, and choose learning questions it can answer.",
+      "kind": "article",
+      "slug": "sitl-simulation-explained",
+      "category": "Simulation and data",
+      "wordCount": 500
+    },
+    {
+      "route": "blog/simulation-reproducibility-checklist/",
+      "url": "https://yana-drones.github.io/yana/blog/simulation-reproducibility-checklist/",
+      "title": "Make a drone simulation experiment reproducible | YANA",
+      "description": "Record versions, models, initial conditions and analysis choices so another student can evaluate a simulation result.",
+      "kind": "article",
+      "slug": "simulation-reproducibility-checklist",
+      "category": "Simulation and data",
+      "wordCount": 504
+    },
+    {
+      "route": "blog/sitl-hitl-differences/",
+      "url": "https://yana-drones.github.io/yana/blog/sitl-hitl-differences/",
+      "title": "SITL and HITL: where the real flight controller enters the loop | YANA",
+      "description": "Compare software-in-the-loop and hardware-in-the-loop using system boundaries and evidence rather than labels.",
+      "kind": "article",
+      "slug": "sitl-hitl-differences",
+      "category": "Simulation and data",
+      "wordCount": 495
+    },
+    {
+      "route": "blog/reading-drone-log-plots/",
+      "url": "https://yana-drones.github.io/yana/blog/reading-drone-log-plots/",
+      "title": "Read a drone log plot before diagnosing the aircraft | YANA",
+      "description": "Check field definitions, axes, timestamps and evidence boundaries before interpreting a drone recording.",
+      "kind": "article",
+      "slug": "reading-drone-log-plots",
+      "category": "Simulation and data",
+      "wordCount": 496
+    },
+    {
+      "route": "blog/telemetry-units-and-timestamps/",
+      "url": "https://yana-drones.github.io/yana/blog/telemetry-units-and-timestamps/",
+      "title": "Telemetry units and timestamps: fix interpretation before plotting | YANA",
+      "description": "Create a telemetry field dictionary and distinguish units, scaling, clock origins and unavailable values.",
+      "kind": "article",
+      "slug": "telemetry-units-and-timestamps",
+      "category": "Simulation and data",
+      "wordCount": 502
+    },
+    {
+      "route": "blog/sensor-sampling-aliasing/",
+      "url": "https://yana-drones.github.io/yana/blog/sensor-sampling-aliasing/",
+      "title": "Sampling and aliasing: why a slow plot can hide fast vibration | YANA",
+      "description": "Explore sampling ambiguity with a paper rotating arrow and distinguish sample rate from display refresh rate.",
+      "kind": "article",
+      "slug": "sensor-sampling-aliasing",
+      "category": "Simulation and data",
+      "wordCount": 515
+    },
+    {
+      "route": "blog/drone-vibration-log-reading/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-vibration-log-reading/",
+      "title": "Read drone vibration evidence without jumping to a repair | YANA",
+      "description": "Distinguish processed vibration, clipping and frequency information using supplied logs and a cautious evidence table.",
+      "kind": "article",
+      "slug": "drone-vibration-log-reading",
+      "category": "Simulation and data",
+      "wordCount": 511
+    },
+    {
+      "route": "blog/drone-power-monitor-readings/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-power-monitor-readings/",
+      "title": "Read voltage, current and consumed charge from a drone power monitor | YANA",
+      "description": "Understand power-monitor location, units and integration using a fictional data worksheet.",
+      "kind": "article",
+      "slug": "drone-power-monitor-readings",
+      "category": "Simulation and data",
+      "wordCount": 489
+    },
+    {
+      "route": "blog/telemetry-packet-sequence/",
+      "url": "https://yana-drones.github.io/yana/blog/telemetry-packet-sequence/",
+      "title": "Telemetry packet gaps: distinguish missing data from a stopped system | YANA",
+      "description": "Interpret message sequence, identity and data freshness with a paper network exercise.",
+      "kind": "article",
+      "slug": "telemetry-packet-sequence",
+      "category": "Simulation and data",
+      "wordCount": 518
+    },
+    {
+      "route": "blog/drone-experiment-report/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-experiment-report/",
+      "title": "Write a drone experiment report that another student can assess | YANA",
+      "description": "Turn a classroom drone investigation into a clear question, method, evidence, limitation and next test.",
+      "kind": "article",
+      "slug": "drone-experiment-report",
+      "category": "Simulation and data",
+      "wordCount": 520
+    },
+    {
       "route": "blog/organise-college-drone-workshop/",
       "url": "https://yana-drones.github.io/yana/blog/organise-college-drone-workshop/",
       "title": "How to organise a college drone-building workshop | YANA",
@@ -502,7 +616,7 @@
       "kind": "article",
       "slug": "organise-college-drone-workshop",
       "category": "Workshop planning",
-      "wordCount": 472
+      "wordCount": 507
     },
     {
       "route": "blog/drone-workshop-agenda-design/",
@@ -532,7 +646,7 @@
       "kind": "article",
       "slug": "drone-workshop-budget-planning",
       "category": "Workshop planning",
-      "wordCount": 477
+      "wordCount": 512
     },
     {
       "route": "blog/drone-workshop-materials-allocation/",
@@ -552,7 +666,7 @@
       "kind": "article",
       "slug": "choose-drone-workshop-facilitator",
       "category": "Workshop planning",
-      "wordCount": 473
+      "wordCount": 509
     },
     {
       "route": "blog/mixed-experience-drone-workshop/",
@@ -562,7 +676,7 @@
       "kind": "article",
       "slug": "mixed-experience-drone-workshop",
       "category": "Workshop planning",
-      "wordCount": 476
+      "wordCount": 512
     },
     {
       "route": "blog/drone-demonstration-backup-plan/",
@@ -572,7 +686,7 @@
       "kind": "article",
       "slug": "drone-demonstration-backup-plan",
       "category": "Workshop planning",
-      "wordCount": 479
+      "wordCount": 515
     },
     {
       "route": "blog/drone-workshop-brief-template/",
@@ -582,7 +696,7 @@
       "kind": "article",
       "slug": "drone-workshop-brief-template",
       "category": "Workshop planning",
-      "wordCount": 460
+      "wordCount": 497
     },
     {
       "route": "blog/drone-workshop-follow-up-plan/",
@@ -592,7 +706,7 @@
       "kind": "article",
       "slug": "drone-workshop-follow-up-plan",
       "category": "Workshop planning",
-      "wordCount": 467
+      "wordCount": 504
     },
     {
       "route": "blog/scope-college-drone-capstone/",
@@ -602,7 +716,7 @@
       "kind": "article",
       "slug": "scope-college-drone-capstone",
       "category": "College projects",
-      "wordCount": 473
+      "wordCount": 511
     },
     {
       "route": "blog/college-drone-requirements-document/",
@@ -622,7 +736,7 @@
       "kind": "article",
       "slug": "college-drone-project-notebook",
       "category": "College projects",
-      "wordCount": 467
+      "wordCount": 503
     },
     {
       "route": "blog/student-quadcopter-wiring-documentation/",
@@ -632,7 +746,7 @@
       "kind": "article",
       "slug": "student-quadcopter-wiring-documentation",
       "category": "College projects",
-      "wordCount": 473
+      "wordCount": 511
     },
     {
       "route": "blog/quadcopter-frame-design-tradeoffs/",
@@ -642,7 +756,7 @@
       "kind": "article",
       "slug": "quadcopter-frame-design-tradeoffs",
       "category": "College projects",
-      "wordCount": 461
+      "wordCount": 497
     },
     {
       "route": "blog/student-drone-data-analysis-project/",
@@ -652,7 +766,7 @@
       "kind": "article",
       "slug": "student-drone-data-analysis-project",
       "category": "College projects",
-      "wordCount": 450
+      "wordCount": 486
     },
     {
       "route": "blog/student-drone-bench-validation/",
@@ -662,7 +776,7 @@
       "kind": "article",
       "slug": "student-drone-bench-validation",
       "category": "College projects",
-      "wordCount": 459
+      "wordCount": 497
     },
     {
       "route": "blog/student-drone-design-review/",
@@ -672,7 +786,7 @@
       "kind": "article",
       "slug": "student-drone-design-review",
       "category": "College projects",
-      "wordCount": 463
+      "wordCount": 499
     },
     {
       "route": "blog/student-drone-project-report/",
@@ -682,7 +796,7 @@
       "kind": "article",
       "slug": "student-drone-project-report",
       "category": "College projects",
-      "wordCount": 471
+      "wordCount": 507
     },
     {
       "route": "blog/semester-drone-project-plan/",
@@ -692,7 +806,7 @@
       "kind": "article",
       "slug": "semester-drone-project-plan",
       "category": "College projects",
-      "wordCount": 462
+      "wordCount": 499
     },
     {
       "route": "blog/drone-learning-outcomes-for-beginners/",
@@ -702,7 +816,7 @@
       "kind": "article",
       "slug": "drone-learning-outcomes-for-beginners",
       "category": "Teaching and learning",
-      "wordCount": 468
+      "wordCount": 504
     },
     {
       "route": "blog/teach-quadcopter-components/",
@@ -712,7 +826,7 @@
       "kind": "article",
       "slug": "teach-quadcopter-components",
       "category": "Teaching and learning",
-      "wordCount": 465
+      "wordCount": 502
     },
     {
       "route": "blog/teach-drone-system-thinking/",
@@ -722,7 +836,7 @@
       "kind": "article",
       "slug": "teach-drone-system-thinking",
       "category": "Teaching and learning",
-      "wordCount": 447
+      "wordCount": 483
     },
     {
       "route": "blog/drone-team-role-rotation/",
@@ -732,7 +846,7 @@
       "kind": "article",
       "slug": "drone-team-role-rotation",
       "category": "Teaching and learning",
-      "wordCount": 458
+      "wordCount": 495
     },
     {
       "route": "blog/drone-lesson-formative-assessment/",
@@ -742,7 +856,7 @@
       "kind": "article",
       "slug": "drone-lesson-formative-assessment",
       "category": "Teaching and learning",
-      "wordCount": 457
+      "wordCount": 492
     },
     {
       "route": "blog/drone-learning-misconceptions/",
@@ -752,7 +866,7 @@
       "kind": "article",
       "slug": "drone-learning-misconceptions",
       "category": "Teaching and learning",
-      "wordCount": 448
+      "wordCount": 488
     },
     {
       "route": "blog/accessible-drone-learning-activities/",
@@ -762,7 +876,7 @@
       "kind": "article",
       "slug": "accessible-drone-learning-activities",
       "category": "Teaching and learning",
-      "wordCount": 464
+      "wordCount": 503
     },
     {
       "route": "blog/simulation-drone-learning-lesson/",
@@ -772,7 +886,7 @@
       "kind": "article",
       "slug": "simulation-drone-learning-lesson",
       "category": "Teaching and learning",
-      "wordCount": 460
+      "wordCount": 499
     },
     {
       "route": "blog/constructive-feedback-drone-projects/",
@@ -782,7 +896,7 @@
       "kind": "article",
       "slug": "constructive-feedback-drone-projects",
       "category": "Teaching and learning",
-      "wordCount": 456
+      "wordCount": 493
     },
     {
       "route": "blog/map-drone-lessons-to-curriculum/",
@@ -792,7 +906,7 @@
       "kind": "article",
       "slug": "map-drone-lessons-to-curriculum",
       "category": "Teaching and learning",
-      "wordCount": 457
+      "wordCount": 493
     },
     {
       "route": "blog/compare-educational-drone-proposals/",
@@ -802,7 +916,7 @@
       "kind": "article",
       "slug": "compare-educational-drone-proposals",
       "category": "Buying an educational drone",
-      "wordCount": 474
+      "wordCount": 511
     },
     {
       "route": "blog/educational-drone-package-checklist/",
@@ -812,7 +926,7 @@
       "kind": "article",
       "slug": "educational-drone-package-checklist",
       "category": "Buying an educational drone",
-      "wordCount": 471
+      "wordCount": 507
     },
     {
       "route": "blog/f450-pixhawk-educational-configuration/",
@@ -822,7 +936,7 @@
       "kind": "article",
       "slug": "f450-pixhawk-educational-configuration",
       "category": "Buying an educational drone",
-      "wordCount": 473
+      "wordCount": 511
     },
     {
       "route": "blog/educational-drone-total-cost/",
@@ -832,7 +946,7 @@
       "kind": "article",
       "slug": "educational-drone-total-cost",
       "category": "Buying an educational drone",
-      "wordCount": 468
+      "wordCount": 504
     },
     {
       "route": "blog/educational-drone-procurement-specification/",
@@ -842,7 +956,7 @@
       "kind": "article",
       "slug": "educational-drone-procurement-specification",
       "category": "Buying an educational drone",
-      "wordCount": 460
+      "wordCount": 497
     },
     {
       "route": "blog/evaluate-educational-drone-demo/",
@@ -852,7 +966,7 @@
       "kind": "article",
       "slug": "evaluate-educational-drone-demo",
       "category": "Buying an educational drone",
-      "wordCount": 463
+      "wordCount": 500
     },
     {
       "route": "blog/educational-drone-software-compatibility/",
@@ -862,7 +976,7 @@
       "kind": "article",
       "slug": "educational-drone-software-compatibility",
       "category": "Buying an educational drone",
-      "wordCount": 461
+      "wordCount": 497
     },
     {
       "route": "blog/educational-drone-training-support/",
@@ -872,7 +986,7 @@
       "kind": "article",
       "slug": "educational-drone-training-support",
       "category": "Buying an educational drone",
-      "wordCount": 466
+      "wordCount": 505
     },
     {
       "route": "blog/educational-drone-handover-checklist/",
@@ -882,7 +996,7 @@
       "kind": "article",
       "slug": "educational-drone-handover-checklist",
       "category": "Buying an educational drone",
-      "wordCount": 465
+      "wordCount": 503
     },
     {
       "route": "blog/request-educational-drone-quote/",
@@ -892,7 +1006,107 @@
       "kind": "article",
       "slug": "request-educational-drone-quote",
       "category": "Buying an educational drone",
-      "wordCount": 461
+      "wordCount": 499
+    },
+    {
+      "route": "blog/start-drone-learning-club/",
+      "url": "https://yana-drones.github.io/yana/blog/start-drone-learning-club/",
+      "title": "Start a drone-learning group with a clear first project | YANA",
+      "description": "Give a new drone club a bounded purpose, shared records and a manageable introductory task before expanding its ambitions.",
+      "kind": "article",
+      "slug": "start-drone-learning-club",
+      "category": "Clubs and makerspaces",
+      "wordCount": 496
+    },
+    {
+      "route": "blog/shared-drone-equipment-access/",
+      "url": "https://yana-drones.github.io/yana/blog/shared-drone-equipment-access/",
+      "title": "Manage shared access to educational drone equipment | YANA",
+      "description": "Create a booking and return process that links equipment access to agreed tasks, supervision and accurate records.",
+      "kind": "article",
+      "slug": "shared-drone-equipment-access",
+      "category": "Clubs and makerspaces",
+      "wordCount": 504
+    },
+    {
+      "route": "blog/drone-club-onboarding/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-club-onboarding/",
+      "title": "Create a useful onboarding path for new drone club members | YANA",
+      "description": "Introduce new members to the club purpose, equipment records and a supervised first task without overwhelming them with jargon.",
+      "kind": "article",
+      "slug": "drone-club-onboarding",
+      "category": "Clubs and makerspaces",
+      "wordCount": 505
+    },
+    {
+      "route": "blog/drone-club-inventory-system/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-club-inventory-system/",
+      "title": "Keep a practical inventory for shared drone components | YANA",
+      "description": "Track component identity, ownership, location and review status so shared equipment remains understandable across club projects.",
+      "kind": "article",
+      "slug": "drone-club-inventory-system",
+      "category": "Clubs and makerspaces",
+      "wordCount": 506
+    },
+    {
+      "route": "blog/drone-club-maintenance-record/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-club-maintenance-record/",
+      "title": "Maintain a useful condition and change log for club drones | YANA",
+      "description": "Record observations, approved changes and unresolved issues so future learners can understand the state of shared drone equipment.",
+      "kind": "article",
+      "slug": "drone-club-maintenance-record",
+      "category": "Clubs and makerspaces",
+      "wordCount": 490
+    },
+    {
+      "route": "blog/drone-club-mentorship/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-club-mentorship/",
+      "title": "Build a mentorship process for a drone-learning club | YANA",
+      "description": "Help experienced members support beginners through explanation, evidence checks and clear escalation boundaries.",
+      "kind": "article",
+      "slug": "drone-club-mentorship",
+      "category": "Clubs and makerspaces",
+      "wordCount": 497
+    },
+    {
+      "route": "blog/drone-club-project-selection/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-club-project-selection/",
+      "title": "Choose a drone club project your members can finish | YANA",
+      "description": "Select club projects by learning value, access, evidence and handover needs rather than novelty alone.",
+      "kind": "article",
+      "slug": "drone-club-project-selection",
+      "category": "Clubs and makerspaces",
+      "wordCount": 500
+    },
+    {
+      "route": "blog/showcase-student-drone-projects/",
+      "url": "https://yana-drones.github.io/yana/blog/showcase-student-drone-projects/",
+      "title": "Showcase student drone work without overstating results | YANA",
+      "description": "Present authentic project photos, diagrams and evidence with readable explanations and honest limits.",
+      "kind": "article",
+      "slug": "showcase-student-drone-projects",
+      "category": "Clubs and makerspaces",
+      "wordCount": 512
+    },
+    {
+      "route": "blog/drone-club-year-handover/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-club-year-handover/",
+      "title": "Hand over a drone club when student coordinators change | YANA",
+      "description": "Transfer equipment records, open questions, institutional contacts and project context so the next team can continue responsibly.",
+      "kind": "article",
+      "slug": "drone-club-year-handover",
+      "category": "Clubs and makerspaces",
+      "wordCount": 513
+    },
+    {
+      "route": "blog/drone-partnership-enquiry-brief/",
+      "url": "https://yana-drones.github.io/yana/blog/drone-partnership-enquiry-brief/",
+      "title": "Plan a drone workshop partnership with YANA | YANA",
+      "description": "Prepare a partnership enquiry for hands-on drone-making and development learning with clear host and delivery responsibilities.",
+      "kind": "article",
+      "slug": "drone-partnership-enquiry-brief",
+      "category": "Clubs and makerspaces",
+      "wordCount": 506
     }
   ],
   "files": [
@@ -902,11 +1116,13 @@
     "partnerships/index.html",
     "blog/index.html",
     "blog/category/buying-an-educational-drone/index.html",
+    "blog/category/clubs-and-makerspaces/index.html",
     "blog/category/college-projects/index.html",
     "blog/category/drone-fundamentals/index.html",
     "blog/category/flight-controllers/index.html",
     "blog/category/frames-and-mechanics/index.html",
     "blog/category/power-and-propulsion/index.html",
+    "blog/category/simulation-and-data/index.html",
     "blog/category/teaching-and-learning/index.html",
     "blog/category/workshop-planning/index.html",
     "blog/how-a-quadcopter-works/index.html",
@@ -949,6 +1165,16 @@
     "blog/connector-compatibility-checklist/index.html",
     "blog/thrust-to-weight-explained/index.html",
     "blog/drone-power-budget-worksheet/index.html",
+    "blog/sitl-simulation-explained/index.html",
+    "blog/simulation-reproducibility-checklist/index.html",
+    "blog/sitl-hitl-differences/index.html",
+    "blog/reading-drone-log-plots/index.html",
+    "blog/telemetry-units-and-timestamps/index.html",
+    "blog/sensor-sampling-aliasing/index.html",
+    "blog/drone-vibration-log-reading/index.html",
+    "blog/drone-power-monitor-readings/index.html",
+    "blog/telemetry-packet-sequence/index.html",
+    "blog/drone-experiment-report/index.html",
     "blog/organise-college-drone-workshop/index.html",
     "blog/drone-workshop-agenda-design/index.html",
     "blog/drone-workshop-venue-checklist/index.html",
@@ -989,6 +1215,16 @@
     "blog/educational-drone-training-support/index.html",
     "blog/educational-drone-handover-checklist/index.html",
     "blog/request-educational-drone-quote/index.html",
+    "blog/start-drone-learning-club/index.html",
+    "blog/shared-drone-equipment-access/index.html",
+    "blog/drone-club-onboarding/index.html",
+    "blog/drone-club-inventory-system/index.html",
+    "blog/drone-club-maintenance-record/index.html",
+    "blog/drone-club-mentorship/index.html",
+    "blog/drone-club-project-selection/index.html",
+    "blog/showcase-student-drone-projects/index.html",
+    "blog/drone-club-year-handover/index.html",
+    "blog/drone-partnership-enquiry-brief/index.html",
     "sitemap.xml",
     "robots.txt",
     "blog-index.json",

@@ -61,6 +61,46 @@ test('shop, technical details and workshop partnership enquiries', async ({ page
   expect(errors).toEqual([]);
 });
 
+test('workshop section follows the product and both workshop buttons work', async ({ page, browser }, testInfo) => {
+  await page.goto('/');
+  expect(await page.locator('#product').evaluate(node => node.nextElementSibling.id)).toBe('workshops');
+  const section = page.locator('#workshops');
+  await expect(section.getByRole('heading', { level: 2 })).toHaveText('Hands-on drone workshops for students and teachers');
+  await expect(section).toContainText('YANA is open to partnering with schools, colleges, academies and robotics clubs');
+  const request = section.getByRole('link', { name: 'Request a Workshop' });
+  const mail = new URL(await request.getAttribute('href'));
+  expect(mail.protocol).toBe('mailto:');
+  expect(mail.pathname).toBe('hello@naadix.xyz');
+  expect(mail.searchParams.get('subject')).toBe('YANA Drone Workshop Enquiry');
+  for (const field of ['Institution name:', 'City:', 'Participant age group:', 'Expected number of participants:', 'Preferred date:']) {
+    expect(mail.searchParams.get('body')).toContain(field);
+  }
+  await section.getByRole('link', { name: 'Explore Workshops' }).click();
+  await expect(page).toHaveURL(/\/drone-workshops\/$/);
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Hands-on drone workshops for students and teachers');
+  await expect(page.getByRole('heading', { name: 'Proposed workshop outline' })).toBeVisible();
+  for (const topic of ['Drone components:', 'Quadcopter basics:', 'Assembly:', 'Electronics:', 'Flight safety:']) {
+    await expect(page.locator('main')).toContainText(topic);
+  }
+  await expect(page.locator('main')).toContainText('potential topics are subject to discussion');
+  const pageMail = new URL(await page.locator('a[data-enquiry="workshop"]').first().getAttribute('href'));
+  expect(pageMail.searchParams.get('subject')).toBe('YANA Drone Workshop Enquiry');
+  await expect(page.locator('main')).not.toContainText(/participants\?|We\?ll|facilitator\?s/);
+  await page.locator('.page-photo img').evaluate(image => image.decode());
+  await page.screenshot({ path: testInfo.outputPath('workshops.png'), fullPage: true });
+  const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+  const fallback = await context.newPage();
+  for (const route of ['/', '/drone-workshops/']) {
+    await fallback.goto('http://127.0.0.1:4173' + route);
+    const link = fallback.locator('a[data-enquiry="workshop"]').first();
+    await expect(link).toBeVisible();
+    const href = new URL(await link.getAttribute('href'));
+    expect(href.pathname).toBe('hello@naadix.xyz');
+    expect(href.searchParams.get('subject')).toBe('YANA Drone Workshop Enquiry');
+  }
+  await context.close();
+});
+
 test('library searches, filters, empty state and progressive display', async ({ page }) => {
   await page.goto('/blog/');
   const cards = page.locator('#blog-list [data-blog-card]');
@@ -105,6 +145,9 @@ test('new pages have accessible layouts and fit desktop, tablet and narrow mobil
   for (const route of ['shop/', 'educational-drone/', 'drone-workshops/', 'partnerships/', 'blog/', ...representatives]) {
     await page.goto(`/${route}`);
     await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(async () => {
+      await Promise.all([...document.images].map(image => image.decode()));
+    });
     const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze();
     expect(results.violations, route).toEqual([]);
     if (route.startsWith('blog/') && route !== 'blog/') {

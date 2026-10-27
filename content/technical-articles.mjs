@@ -2,5 +2,6 @@ import { fundamentals } from './technical-fundamentals.mjs';
 import { mechanics } from './technical-mechanics.mjs';
 import { controllers } from './technical-controllers.mjs';
 import { power } from './technical-power.mjs';
+import { simulation } from './technical-simulation.mjs';
 
-export const technicalArticles = [...fundamentals, ...mechanics, ...controllers, ...power];
+export const technicalArticles = [...fundamentals, ...mechanics, ...controllers, ...power, ...simulation];

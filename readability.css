@@ -409,10 +409,12 @@ nav .nav-contact {
   align-items: start;
 }
 .page-photo {
+  margin: 0;
   padding: 25px;
   background: #ede8df;
 }
 .page-photo img {
+  height: auto;
   max-height: 430px;
   width: 100%;
   object-fit: contain;
@@ -431,6 +433,11 @@ nav .nav-contact {
 .table-scroll {
   overflow-x: auto;
   margin-block: 24px;
+}
+.table-hint {
+  display: none;
+  font-size: 16px;
+  color: var(--muted);
 }
 .table-scroll:focus-visible {
   outline: 3px solid var(--red);
@@ -768,6 +775,9 @@ nav .nav-contact {
   }
 }
 @media (max-width: 760px) {
+  .table-hint {
+    display: block;
+  }
   .hero-layout {
     grid-template-columns: 1fr;
   }

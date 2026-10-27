@@ -135,7 +135,7 @@ export async function buildPages({
   const prefixFor = (route) =>
     "../".repeat(route.split("/").filter(Boolean).length);
   const enquiry = (kind, label) =>
-    `<a class="button button-primary" data-enquiry="${kind}" href="mailto:${site.email}?subject=${encodeURIComponent("YANA " + kind + " enquiry")}">${label} <span aria-hidden="true">↗</span></a>`;
+    `<a class="button button-primary" data-enquiry="${kind}" href="mailto:${site.email}?subject=${encodeURIComponent(kind === "workshop" ? "YANA Drone Workshop Enquiry" : "YANA " + kind + " enquiry")}">${label} <span aria-hidden="true">↗</span></a>`;
   const reference = (url, title) => `<a href="${url}">${title}</a>`;
   async function emit(file, content) {
     const relative = file.replaceAll("\\", "/");
@@ -192,7 +192,7 @@ export async function buildPages({
     return `<div class="faq-list">${rows.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("")}</div>`;
   }
   function table(headers, rows) {
-    return `<div class="table-scroll" role="region" aria-label="Comparison table" tabindex="0"><table class="comparison-table"><thead><tr>${headers.map((item) => `<th scope="col">${escape(item)}</th>`).join("")}</tr></thead><tbody>${rows.map((row) => `<tr>${row.map((cell, index) => (index === 0 ? `<th scope="row">${escape(cell)}</th>` : `<td>${escape(cell)}</td>`)).join("")}</tr>`).join("")}</tbody></table></div>`;
+    return `<p class="table-hint">Scroll the table to see all columns.</p><div class="table-scroll" role="region" aria-label="Comparison table" tabindex="0"><table class="comparison-table"><thead><tr>${headers.map((item) => `<th scope="col">${escape(item)}</th>`).join("")}</tr></thead><tbody>${rows.map((row) => `<tr>${row.map((cell, index) => (index === 0 ? `<th scope="row">${escape(cell)}</th>` : `<td>${escape(cell)}</td>`)).join("")}</tr>`).join("")}</tbody></table></div>`;
   }
 
   await page(
@@ -306,61 +306,13 @@ export async function buildPages({
       )}</section><section class="page-container page-section"><h2>Tell us what you need.</h2><p>Include your institution, location, intended use, quantity, preferred timeline and any documentation or training requirements. We’ll use these to discuss a suitable configuration.</p>${enquiry("quote", "Request a Quote")} <a class="text-link" href="../blog/">Read the buying and learning guides ↗</a></section>`,
   );
 
-  const workshopIntro =
-    "Plan hands-on drone-making and drone-development learning for your college, robotics club or makerspace. Professional-led training is scoped with you before booking.";
+  const workshopIntro = "Explore how drones are built and how their components work together. YANA welcomes students, teachers and institutions to discuss a hands-on learning workshop shaped around their group.";
   await page(
     "drone-workshops/",
-    "Hands-on Drone Building Workshops for Students | YANA",
-    "Plan a drone-making or development workshop with YANA. Discuss learning goals, professional-led training, equipment, venue and a tailored proposal.",
-    top(
-      "drone-workshops/",
-      "Hands-on drone building workshops",
-      workshopIntro,
-    ) +
-      `<section class="page-container page-section two-columns"><div><h2>Learn by working through a real system.</h2><p>A workshop can connect component identification, mechanical assembly, electronics and flight-control concepts. We’ll start with the students’ experience and your institution’s learning objectives.</p><p>Ask about professional-led sessions for your group. Facilitator availability, relevant experience and the agreed responsibilities will be shared in the proposal; no specific instructor or credential is advertised here.</p>${enquiry("workshop", "Request a Workshop")}</div>${photo("../")}</section><section class="page-container page-section"><h2>A possible workshop format</h2><p>This agenda is provisional. Session length, materials, group size and the amount of practical work are agreed individually.</p>${table(
-        ["Stage", "Possible learning activity", "To agree before the event"],
-        [
-          [
-            "Understand the parts",
-            "Identify airframe, motors, power system and controller",
-            "Learner level and demonstration equipment",
-          ],
-          [
-            "Explore assembly",
-            "Work through mechanical and electrical relationships",
-            "Supervision, tools and each group’s tasks",
-          ],
-          [
-            "Develop and investigate",
-            "Discuss controller setup, software concepts or simulation",
-            "Software, computers and compatible hardware",
-          ],
-          [
-            "Review and demonstrate",
-            "Discuss observations and an appropriate supervised demonstration",
-            "Venue, permissions and a suitable demonstration plan",
-          ],
-        ],
-      )}<p>A workshop booking does not guarantee that every participant will build or fly a separate drone. Agree the actual activity and equipment allocation first.</p></section><section class="page-container page-section two-columns"><div><h2>For the organiser</h2><ul><li>Share the learners’ age range, prior experience and learning goals.</li><li>Confirm venue access, tables, power, computers and internet needs.</li><li>Agree group size, equipment allocation, supervision and an equipment handover plan.</li><li>Identify the host coordinator and confirm any photography permissions.</li></ul></div><div><h2>For the proposal</h2><ul><li>Named facilitator and relevant professional experience for your review.</li><li>Session format, duration, materials and practical activities.</li><li>Responsibilities for equipment, venue, permissions and supervision.</li><li>Itemised cost, scheduling, deliverables and any follow-up support.</li></ul></div></section><section class="page-container page-section"><h2>Workshop questions</h2>${faqs(
-        [
-          [
-            "Can you work with our college or robotics club?",
-            "Send your institution, location, preferred dates, group size and goals. Delivery and availability are confirmed after the scope is reviewed.",
-          ],
-          [
-            "Is a workshop a pilot certification course?",
-            "No pilot certification or regulatory approval is advertised. This is an educational workshop enquiry offer. Any proposed completion document must be described accurately in the quote.",
-          ],
-          [
-            "Will a flying demonstration be included?",
-            "Only if it is appropriate, permitted and explicitly agreed. A classroom invitation does not establish airspace permission. A non-flying demonstration or simulation may be more suitable.",
-          ],
-          [
-            "Can teachers or club mentors join?",
-            "Include faculty or mentor development in the brief. Any onboarding, documentation or follow-up sessions must be included in the proposal.",
-          ],
-        ],
-      )}</section><section class="page-container page-section"><h2>Build a programme together.</h2><p>For recurring programmes, faculty involvement or co-hosted events, explore a partnership with YANA.</p><a class="button button-dark" href="../partnerships/">Discuss a Partnership ↗</a> <a class="text-link" href="../blog/">Read the workshop planning guides ↗</a></section>`,
+    "Hands-on Drone Workshops for Students and Teachers | YANA",
+    "Discuss hands-on drone workshops for students, teachers, schools, colleges, academies and robotics clubs. Explore proposed topics and enquire with YANA.",
+    top("drone-workshops/", "Hands-on drone workshops for students and teachers", workshopIntro) +
+    `<section class="page-container page-section two-columns"><div><h2>Bring drone learning into your classroom.</h2><p>Students can explore the parts of a quadcopter and the relationships between its structure, electronics and control system. Teachers and institutions can discuss how these topics connect with their learning goals and participants’ experience.</p><p>We’ll agree the outline, practical activities, equipment and supervision with your institution before confirming arrangements.</p>${enquiry("workshop", "Request a Workshop")}</div>${photo("../")}</section><section class="page-container page-section"><h2>Proposed workshop outline</h2><p>These potential topics are subject to discussion. The final outline will reflect your participants’ age group, prior experience, learning goals and available resources.</p><ul><li><strong>Drone components:</strong> identify the frame, motors, propellers, power system and flight controller, and discuss their roles.</li><li><strong>Quadcopter basics:</strong> explore how the parts work together and introduce the ideas behind balance and control.</li><li><strong>Assembly:</strong> discuss how the structure and components fit together, with any practical work agreed for the group.</li><li><strong>Electronics:</strong> explore power and signal connections using suitable examples and supervised activities.</li><li><strong>Flight safety:</strong> discuss responsible handling, supervision and the considerations involved in planning any drone activity.</li></ul><p class="page-callout">The outline is a starting point for discussion. Any demonstrations or flight activities require separate agreement and are not confirmed by an enquiry.</p></section><section class="page-container page-section"><h2>Partner with YANA</h2><p>Schools, colleges, academies and robotics clubs are welcome to partner with YANA to plan a workshop for their students and teachers. Tell us what your group would like to explore and what learning resources you already have.</p><p>Professional-led training can be discussed as part of the proposal. The facilitator’s relevant experience, availability and responsibilities will be shared for your review before arrangements are confirmed.</p><a class="text-link" href="../partnerships/">Explore an institutional partnership &#8599;</a></section><section class="page-container page-section"><h2>Tell us about your group</h2><p>Include these details in your enquiry so we can discuss a suitable workshop outline:</p><ul><li>Institution name</li><li>City</li><li>Participant age group</li><li>Expected number of participants</li><li>Preferred date</li></ul>${enquiry("workshop", "Request a Workshop")} <a class="text-link" href="../blog/category/workshop-planning/">Read the workshop planning guides &#8599;</a></section>`,
   );
 
   await page(
