@@ -1,21 +1,21 @@
 {
   "logo": "yana-logo.png",
-  "hero": "quadcopter-overview.jpg",
-  "product": "quadcopter-poster.jpg",
+  "hero": "quadcopter-overview-cutout.png",
+  "product": "quadcopter-overview-cutout.png",
   "items": [
     {
-      "file": "quadcopter-overview.jpg",
-      "alt": "YANA quadcopter held above a workbench, showing four black and white arms, red motors, exposed wiring and the central flight controller; propellers are not fitted.",
+      "file": "quadcopter-overview-cutout.png",
+      "alt": "Background-removed photograph of the YANA quadcopter, showing four black and white arms, red motors, exposed wiring and the central flight controller; propellers are not fitted.",
       "caption": "The quadcopter, up close"
     },
     {
-      "file": "drone.jpg",
-      "alt": "Close view from above of the YANA quadcopter on a workbench, showing its central mounting plates, black and white frame arms, wiring and motor mounts during assembly.",
+      "file": "drone-detail-cutout.png",
+      "alt": "Background-removed close-up of the YANA quadcopter, showing its central mounting plates, black and white frame arms, wiring and motor mounts during assembly.",
       "caption": "A closer look at the frame and assembly"
     },
     {
       "file": "quadcopter-demo.mp4",
-      "poster": "quadcopter-poster.jpg",
+      "poster": "quadcopter-overview-cutout.png",
       "caption": "On the workbench — a closer look",
       "transcript": "A handheld camera moves around the stationary YANA quadcopter on a workbench. The clip shows the black and white frame arms, four motors without propellers, exposed central electronics, illuminated indicator lights, an antenna on a mast and a connected battery. The quadcopter remains on the workbench throughout the clip. This is a close-up view of the hardware, not a flight demonstration."
     }

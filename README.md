@@ -30,7 +30,9 @@ After editing source or media, run `npm test`, commit the source **and** the reg
 
 The supplied `assets/yana-logo.png` is the original logo, copied from the provided `Yama logo.png`. The build trims outer white space and creates responsive WebP variants; it does not modify the original. Colours are derived from the supplied artwork.
 
-The website uses the two supplied drone photographs and the supplied workbench video. `quadcopter-overview.jpg` is the provided `IMG_20260711_121303482_HDR.jpg`; `drone.jpg` keeps its supplied name. `quadcopter-demo.mp4` is a high-quality, full-resolution 1080p H.264 web export of `VID_20260711_223208904.mp4`, with original audio and web-friendly fast-start metadata. The original video remains on the Desktop. The poster is an actual frame from that clip. There is no stock or generated drone imagery.
+The website uses background-removed versions of the two supplied drone photographs and the supplied workbench video. `quadcopter-overview.jpg` is the provided `IMG_20260711_121303482_HDR.jpg`; `drone.jpg` keeps its supplied name. The transparent PNG derivatives are `quadcopter-overview-cutout.png` and `drone-detail-cutout.png`; original photographs are preserved. The cutouts were edited with the built-in imagegen tool specifically to remove the backgrounds and supporting hand. [Edit notes and prompts](assets/IMAGE-EDITS.md) document their provenance. No stock images are used.
+
+`quadcopter-demo.mp4` is a high-quality, full-resolution 1080p H.264 web export of `VID_20260711_223208904.mp4`, with original audio and web-friendly fast-start metadata. The original video remains on the Desktop. The video preview now uses the overview cutout to match the other website images; `quadcopter-poster.jpg` preserves the original extracted video frame. The footage itself has not been background-edited.
 
 The footage shows stationary hardware on a workbench, not a flight demonstration. A factual visual description is included. Original audio has been preserved; spoken-audio transcription/caption accuracy still needs manual review, since audio could not be auditioned in this environment.
 
