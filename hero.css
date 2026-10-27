@@ -23,7 +23,7 @@
   align-items: center;
   gap: 11px;
   margin: 0 0 26px;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 650;
   letter-spacing: 1.9px;
 }
@@ -46,7 +46,7 @@
   max-width: 415px;
   margin: 0 0 29px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.85;
 }
 .hero-actions {
@@ -59,14 +59,14 @@
   min-height: 56px;
   gap: 32px;
   padding-inline: 24px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .hero-secondary {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   min-height: 44px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 550;
 }
 .hero-secondary:hover {
@@ -95,7 +95,7 @@
 .hero-note p {
   margin: 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.6;
 }
 .hero-note strong {
@@ -115,7 +115,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 6px 5px 0 24px;
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 1.4px;
 }
 .hero-model-number {
@@ -197,7 +197,7 @@
   transform: translateX(-50%);
   white-space: nowrap;
   color: #6b6255;
-  font-size: 9px;
+  font-size: 16px;
   letter-spacing: 1.6px;
 }
 .hero-specs {
@@ -215,7 +215,7 @@
   padding-left: 12px;
   flex-shrink: 0;
   color: var(--muted);
-  font-size: 8px;
+  font-size: 16px;
   line-height: 1.7;
   letter-spacing: 1px;
 }
@@ -235,13 +235,13 @@
   margin: 0;
 }
 .hero-specs dt {
-  font-size: 8px;
+  font-size: 16px;
   letter-spacing: 1px;
   color: var(--muted);
 }
 .hero-specs dd {
   margin: 3px 0 0;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -279,11 +279,11 @@
     letter-spacing: -4px;
   }
   .hero-eyebrow {
-    font-size: 10px;
+    font-size: 16px;
     letter-spacing: 1.3px;
   }
   .hero-description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .hero-stage {
     min-height: 415px;
@@ -302,7 +302,7 @@
     gap: 23px;
   }
   .hero-secondary {
-    font-size: 11px;
+    font-size: 16px;
     gap: 8px;
   }
   .hero-specs {
@@ -313,7 +313,7 @@
     gap: 17px;
   }
   .hero-specs-label {
-    font-size: 7px;
+    font-size: 16px;
     letter-spacing: 0.5px;
   }
 }
@@ -329,12 +329,12 @@
     letter-spacing: -3.7px;
   }
   .hero-eyebrow {
-    font-size: 9px;
+    font-size: 16px;
     letter-spacing: 1px;
     gap: 8px;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: 16px;
   }
   .hero-actions {
     gap: 6px;
@@ -356,13 +356,13 @@
   }
   .hero-artwork-top {
     padding-left: 0;
-    font-size: 8px;
+    font-size: 16px;
   }
   .hero-model-number {
     font-size: 28px;
   }
   .hero-stage-caption {
-    font-size: 7px;
+    font-size: 16px;
     letter-spacing: 1px;
   }
   .hero-specs {
@@ -373,16 +373,16 @@
   }
   .hero-specs-label {
     width: 100%;
-    font-size: 8px;
+    font-size: 16px;
   }
   .hero-specs-label br {
     display: none;
   }
   .hero-specs dt {
-    font-size: 7px;
+    font-size: 16px;
   }
   .hero-specs dd {
-    font-size: 12px;
+    font-size: 16px;
   }
   .hero-specs > a {
     width: 40px;
@@ -400,7 +400,7 @@
     padding-block: 0;
   }
   .hero-eyebrow {
-    font-size: 9px;
+    font-size: 16px;
     letter-spacing: 1.4px;
     margin-bottom: 22px;
   }
@@ -413,7 +413,7 @@
   .hero-description {
     max-width: 390px;
     margin-bottom: 22px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.75;
   }
   .hero-actions {
@@ -421,10 +421,10 @@
   }
   .hero-actions .button {
     min-height: 53px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .hero-secondary {
-    font-size: 11px;
+    font-size: 16px;
   }
   .hero-note {
     display: none;
@@ -433,7 +433,7 @@
     margin-top: 12px;
   }
   .hero-artwork-top {
-    font-size: 9px;
+    font-size: 16px;
     padding-inline: 0;
   }
   .hero-model-number {
@@ -455,7 +455,7 @@
     max-height: 350px;
   }
   .hero-stage-caption {
-    font-size: 7px;
+    font-size: 16px;
     letter-spacing: 1.25px;
     bottom: 3px;
   }
@@ -474,7 +474,7 @@
   }
   .hero-specs-label {
     width: auto;
-    font-size: 7px;
+    font-size: 16px;
   }
   .hero-specs-label br {
     display: initial;
@@ -483,7 +483,7 @@
     gap: 17px;
   }
   .hero-specs dd {
-    font-size: 12px;
+    font-size: 16px;
   }
   .hero-specs > a {
     width: 36px;
@@ -501,7 +501,7 @@
     gap: 12px;
   }
   .hero-specs dd {
-    font-size: 11px;
+    font-size: 16px;
   }
   .hero-specs > a {
     width: 32px;

@@ -1,6 +1,6 @@
 # YANA website
 
-A responsive, accessible single-page website for YANA’s initial educational quadcopter. Built with HTML, CSS and small JavaScript modules. No framework, application server, database or API keys are required in production.
+A responsive static website for YANA’s educational quadcopter, workshop enquiries and learning library. Built with HTML, CSS and small JavaScript modules. No framework, application server, database or API keys are required in production.
 
 ## Run locally
 
@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open **http://localhost:4173**. The development server rebuilds after changes to HTML, CSS, JavaScript or `assets/`. Refresh the browser to see changes. Stop with Ctrl+C. Set the optional `PORT` environment variable to use another port.
+Open **http://localhost:4173**. The development server rebuilds after changes to homepage HTML, CSS, browser JavaScript or `assets/`. Refresh the browser to see changes. Restart it after changing `content/`, `site.config.mjs` or the page generator. Stop with Ctrl+C. Set the optional `PORT` environment variable to use another port.
 
 If the computer’s shared npm cache reports an `ENOENT` error, use `npm install --cache .npm-cache`. This keeps a separate, ignored cache inside the project.
 
@@ -24,7 +24,22 @@ npm run preview
 
 The live repository is **[yana-drones/yana](https://github.com/yana-drones/yana)**. Its existing GitHub Pages configuration publishes the root of `main` at **https://yana-drones.github.io/yana/**. The build regenerates the root `index.html`, `media/` and `.nojekyll` for that configuration, as well as `dist/` for local preview or other static hosts. Asset paths are relative, so deployment under `/yana/` works.
 
-After editing source or media, run `npm test`, commit the source **and** the regenerated root `index.html` and `media/`, then push to `main`. GitHub Pages publishes the committed output automatically. Edit **`src/index.html`**, not the generated root HTML. No change to Pages settings or build workflow is required. For a different static host, publish only `dist/`.
+After editing source or media, run `npm test`, commit the source **and all regenerated output**, then push to `main`. Output includes root `index.html`, `media/`, icons, `shop/`, `educational-drone/`, `drone-workshops/`, `partnerships/`, `blog/`, `blog-index.json`, `sitemap.xml`, `robots.txt` and `generated-pages.json`. GitHub Pages publishes committed output automatically. Edit **`src/index.html`** and the generator, rather than generated HTML. For a different static host, publish only `dist/`.
+
+## Pages and learning library
+
+- `/`: product introduction, continuously moving audience strip, prototype gallery, workshop partnership section and combined peach contact/footer area.
+- `/shop/`: the single educational quadcopter listing and quote request.
+- `/educational-drone/`: proposed F450 / Pixhawk 2.4.8 configuration, a specification status table and purchasing questions.
+- `/drone-workshops/` and `/partnerships/`: workshop planning and institutional partnership enquiries. An enquiry is not a confirmed booking.
+- `/blog/`: 100 distinct learning guides, with search, topic filtering and progressive display. All article links and bodies are present in the initial HTML, including without JavaScript.
+- `/blog/category/<topic>/`: ten topic hubs, with ten articles each.
+
+The learning library covers drone fundamentals, frames and mechanics, flight controllers, power and propulsion, simulation and data, workshop planning, college projects, teaching and learning, buying an educational drone, and clubs and makerspaces. Articles use a shared readable layout, contents links, practical activities, FAQs, references and related guides.
+
+Edit the structured content in `content/technical-*.mjs` or `content/planning-*.mjs`. The two entry modules export the article collections. Each article needs a stable unique `slug`, `title`, `description`, `category`, `answer`, `sections`, `activity`, `faqs`, `sources` and optional `related` slugs. Keep titles, descriptions and substantive advice distinct. Verify technical claims against primary documentation. Never treat generic component documentation as a confirmed YANA package specification. Run `npm run build` after editing; changes to URLs also need redirects if a page has already been indexed.
+
+`scripts/pages.mjs` owns shared headers, footers, page layouts, metadata, article rendering, category hubs and sitemap generation. `generated-pages.json` records published routes, article word counts and generated files, so obsolete generated files can be removed without touching source content. [SEO notes](docs/SEO.md) explain indexing and the research boundaries.
 
 ## Replace the assets
 
@@ -81,15 +96,17 @@ Photos are auto-oriented and exported at up to 640, 1280 and 1920 pixels wide wi
 
 ## Edit content and branding
 
-- `src/index.html`: all six content sections, product copy and fallback email links.
+- `src/index.html`: homepage sections, product copy and fallback email links.
 - `index.html` and `media/`: generated, tracked GitHub Pages output; rebuild rather than editing these directly.
 - `styles.css`: palette variables, typography, responsive layouts and reduced-motion support.
-- `app.js`: mobile menu, prefilled email enquiries, gallery filters and keyboard-accessible image dialog.
+- `readability.css`: shared larger text, page layouts, moving strip, product tables, learning library and merged contact/footer styling.
+- `app.js`: mobile menu, prefilled email enquiries, gallery dialog and blog search/filter controls.
+- `site.config.mjs`: public site URL, email address and publication date used by generated metadata.
 - `scripts/build.mjs`: media selection, optimisation and static output.
 - `scripts/server.mjs`: local static server with byte-range support for video seeking.
 - `fonts/`: locally hosted DM Sans and Manrope fonts, with their licenses. The optional `scripts/fetch-fonts.mjs` refreshes them; normal builds and page visits do not contact a font provider.
 
-The initial email is **hello@naadix.xyz**. To replace it, update it in **both `src/index.html` and `app.js`** so that no-JavaScript links and enhanced prefilled emails stay consistent. Demo, quote and general enquiry links open the visitor’s configured email app. There is no form backend, automatic email delivery, enquiry storage or success message claiming a message was sent. A working email client is needed; the visible address can also be copied.
+The initial email is **hello@naadix.xyz**. Change `email` in **`site.config.mjs`** and rebuild: the generator updates homepage fallback links, all new pages and the address used by browser enquiry templates. Demo, quote, workshop, partnership and general enquiry links open the visitor’s configured email app. There is no form backend, automatic email delivery or enquiry storage. A working email client is needed; the visible address can also be copied.
 
 The navigation, content, photos and email links work without JavaScript. JavaScript adds the collapsed mobile menu, gallery filtering and image enlargement. Native video controls remain available. The photo dialog supports Escape, left/right arrow keys, a focus trap through the native dialog element and focus restoration when closed.
 
@@ -100,7 +117,7 @@ npx playwright install chromium
 npm test
 ```
 
-Tests build the site and start/stop a temporary preview server. Stop any manually started server on port 4173 before testing. Desktop and mobile checks cover requested sections, honest configuration language, loaded images, distinct email enquiry links, navigation, horizontal overflow at 320/390/768/1440 pixels, no-JavaScript essentials and axe WCAG A/AA checks. Gallery interaction checks run against available real media; test-only browser fixtures additionally exercise photo filtering, enlargement and focus handling without adding fake assets to the site.
+Tests build the site and start/stop a temporary preview server. Stop any manually started server on port 4173 before testing. Desktop and mobile checks cover navigation, readable type, responsive layouts, no-JavaScript content, workshop/quote email templates, library search/filtering, article layouts and axe WCAG A/AA checks. The content audit checks every generated route, internal link, metadata uniqueness, canonical URL and sitemap entry, and verifies 100 unique articles across ten topics. Gallery checks cover real photos, keyboard/focus handling, video playback/seeking and byte-range responses.
 
 Automated accessibility tests do not replace manual review of final media descriptions, caption accuracy, keyboard usability and device testing. Delivery to the mailbox and external email-client behaviour cannot be verified by browser tests.
 
@@ -111,7 +128,10 @@ Automated accessibility tests do not replace manual review of final media descri
 - Motors, propellers, ESCs, battery, charger, radio equipment and accessories.
 - Verified performance specifications, including flight time, range and payload. No numerical claims are published.
 - Package contents, documentation and any training or support.
+- Workshop scope, facilitator identity and relevant experience, dates, duration, group size, equipment responsibilities, location/service area, pricing and deliverables. These are enquiry options, not published guarantees.
 - Price, lead time, delivery terms, warranty terms, certification information and demonstration arrangements. No claims about these are published.
 - Confirm that `hello@naadix.xyz` is monitored and intended for public enquiries.
+- Confirm public business identity, contact/location details and any genuine instructor profiles before adding them. No invented affiliations, customer stories or credentials are used.
+- Verify the GitHub Pages URL in Search Console and submit the sitemap. Search indexing, traffic and rankings cannot be promised by adding articles.
 
 Only one educational quadcopter is listed. FPV and autonomous drones are not advertised as available products. There are no invented testimonials, prices, performance figures or certification claims.

@@ -11,6 +11,13 @@ import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import sharp from "sharp";
 import { writeFavicons } from "./favicon.mjs";
+import {
+  loadArticles,
+  buildPages,
+  seoHead,
+  homeFeaturedPosts,
+} from "./pages.mjs";
+import { site } from "../site.config.mjs";
 
 export const root = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -49,6 +56,7 @@ async function walk(directory, prefix = "") {
 }
 
 export async function build() {
+  const articles = await loadArticles(root);
   await mkdir(path.join(output, "media"), { recursive: true });
   const files = await walk(assets);
   let config = {};
@@ -248,9 +256,23 @@ export async function build() {
     .replaceAll("<!-- LOGO -->", logoHtml)
     .replace("<!-- HERO_MEDIA -->", hero)
     .replace("<!-- PRODUCT_MEDIA -->", product)
-    .replace("<!-- GALLERY -->", galleryHtml);
+    .replace("<!-- GALLERY -->", galleryHtml)
+    .replace("<!-- FEATURED_POSTS -->", homeFeaturedPosts(articles))
+    .replace(
+      "<!-- SEO_HEAD -->",
+      seoHead({
+        title: "YANA | Educational Drones & Drone Workshops",
+        description:
+          "Explore educational quadcopters, hands-on drone-making workshops and institutional partnerships with YANA.",
+      }),
+    )
+    .replace(
+      '<html lang="en">',
+      `<html lang="en" data-email="${escape(site.email)}">`,
+    )
+    .replaceAll("hello@naadix.xyz", site.email);
   await writeFile(path.join(output, "index.html"), html);
-  for (const file of ["styles.css", "hero.css", "app.js"])
+  for (const file of ["styles.css", "hero.css", "readability.css", "app.js"])
     await copyFile(path.join(root, file), path.join(output, file));
   await mkdir(path.join(output, "fonts"), { recursive: true });
   for (const file of await readdir(path.join(root, "fonts")))
@@ -289,11 +311,21 @@ export async function build() {
       await copyFile(path.join(output, file), path.join(root, file));
   }
   await writeFile(path.join(root, ".nojekyll"), "");
+  const pages = await buildPages({
+    root,
+    output,
+    articles,
+    logoHtml,
+    heroHtml: hero,
+  });
   console.log(
     `Built YANA: ${logo ? "supplied logo" : "text wordmark"}, ${photoNumber} photos, ${videoNumber} videos. ${writtenFiles.size} media files.`,
   );
   if (manifest.needsConfirmation.length)
     console.log(`Still to review: ${manifest.needsConfirmation.join("; ")}.`);
+  console.log(
+    `Built ${pages.articleCount} articles and ${pages.pages.length - pages.articleCount} supporting pages.`,
+  );
   return manifest;
 }
 

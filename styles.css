@@ -88,7 +88,7 @@ summary:focus-visible {
   align-items: center;
   gap: 13px;
   margin: 0 0 25px;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 1.8px;
   line-height: 1.5;
@@ -102,7 +102,7 @@ summary:focus-visible {
 .section-number {
   font-family: var(--font);
   color: var(--red);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0;
 }
 .skip-link {
@@ -152,7 +152,7 @@ nav {
   gap: 36px;
 }
 nav a {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 550;
 }
 nav a:hover {
@@ -189,7 +189,7 @@ nav .nav-contact {
   gap: 36px;
   min-height: 51px;
   padding: 13px 22px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   border: 1px solid transparent;
   transition:
@@ -211,7 +211,7 @@ nav .nav-contact {
   line-height: 1;
 }
 .text-link {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
@@ -250,12 +250,12 @@ nav .nav-contact {
 }
 .media-pending p {
   max-width: 270px;
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
   margin: 0;
 }
 .pending-label {
-  font-size: 9px;
+  font-size: 16px;
   letter-spacing: 1.4px;
   font-weight: 700;
   color: #69675f;
@@ -271,7 +271,7 @@ nav .nav-contact {
   padding-block: 27px;
 }
 .audience-inner p {
-  font-size: 9px;
+  font-size: 16px;
   letter-spacing: 1.1px;
   line-height: 1.7;
   margin: 0;
@@ -306,7 +306,7 @@ h2 {
 .about-copy {
   padding-top: 38px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
 }
 .about-copy p {
   margin: 0 0 19px;
@@ -336,7 +336,7 @@ h2 {
   padding-top: 23px;
 }
 .step-number {
-  font-size: 9px;
+  font-size: 16px;
   letter-spacing: 1.3px;
   color: var(--red);
   font-weight: 600;
@@ -349,7 +349,7 @@ h2 {
   margin: 14px 0 7px;
 }
 .learning-steps p {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
   margin: 0;
   max-width: 260px;
@@ -365,7 +365,7 @@ h2 {
   margin-bottom: 43px;
 }
 .section-heading > p {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
   margin: 0 0 3px;
   max-width: 270px;
@@ -387,7 +387,7 @@ h2 {
   min-width: 0;
 }
 .image-label {
-  font-size: 9px;
+  font-size: 16px;
   letter-spacing: 1.4px;
 }
 .product-image > picture {
@@ -401,7 +401,7 @@ h2 {
   object-fit: contain;
 }
 .image-caption {
-  font-size: 10px;
+  font-size: 16px;
   color: #62635e;
 }
 .product-copy {
@@ -421,7 +421,7 @@ h2 {
 }
 .product-copy > p:not(.eyebrow):not(.small-note) {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.8;
   max-width: 370px;
 }
@@ -434,7 +434,7 @@ h2 {
 .tags span {
   border: 1px solid #d7d6ce;
   padding: 3px 9px;
-  font-size: 9px;
+  font-size: 16px;
 }
 .product-config {
   display: flex;
@@ -444,20 +444,20 @@ h2 {
   margin-bottom: 25px;
 }
 .product-config > span {
-  font-size: 8px;
+  font-size: 16px;
   letter-spacing: 0.6px;
   color: var(--muted);
 }
 .product-config strong {
   display: block;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 550;
   letter-spacing: 0;
   color: var(--ink);
   margin-top: 4px;
 }
 .small-note {
-  font-size: 10px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.7;
 }
@@ -471,7 +471,7 @@ h2 {
 }
 .details-intro > p:not(.eyebrow) {
   max-width: 330px;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   margin-block: 24px;
 }
@@ -481,7 +481,7 @@ h2 {
   gap: 9px;
   border: 1px solid #dbd4c9;
   padding: 6px 11px;
-  font-size: 9px;
+  font-size: 16px;
 }
 .spec-list {
   margin: 0;
@@ -498,28 +498,28 @@ h2 {
   padding-top: 0;
 }
 .spec-list dt {
-  font-size: 12px;
+  font-size: 16px;
   max-width: 50%;
 }
 .spec-list dd {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 550;
   text-align: right;
 }
 .spec-list dd span {
   display: block;
-  font-size: 9px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--muted);
 }
 .spec-list dd.unconfirmed {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--muted);
 }
 .spec-note {
-  font-size: 10px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--muted);
   margin-top: 19px;
@@ -544,7 +544,7 @@ h2 {
   background: transparent;
   border: 1px solid #d5d3c9;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 16px;
   padding: 8px 17px;
   min-height: 41px;
 }
@@ -554,7 +554,7 @@ h2 {
   color: #fff;
 }
 #gallery-count {
-  font-size: 11px;
+  font-size: 16px;
   color: var(--muted);
   margin: 0;
 }
@@ -607,7 +607,7 @@ h2 {
   font-size: 17px;
 }
 .gallery-item figcaption {
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.6;
   margin-top: 10px;
   display: flex;
@@ -615,7 +615,7 @@ h2 {
 }
 .gallery-item figcaption > span {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 16px;
   letter-spacing: 0.8px;
   flex-shrink: 0;
 }
@@ -626,7 +626,7 @@ h2 {
   object-fit: contain;
 }
 .video-description {
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 9px;
   color: var(--muted);
 }
@@ -660,7 +660,7 @@ h2 {
   margin: 0 0 8px;
 }
 .gallery-empty p:last-child {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
   max-width: 410px;
   margin: 0;
@@ -690,7 +690,7 @@ h2 {
   color: #a62b1b;
 }
 .contact-inner > div > p:not(.eyebrow):not(.small-note) {
-  font-size: 13px;
+  font-size: 16px;
   margin: 25px 0;
   color: #585345;
 }
@@ -703,7 +703,7 @@ h2 {
 }
 .contact-email {
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   margin: 14px 0 14px 20px;
   border-bottom: 1px solid #978569;
 }
@@ -773,11 +773,11 @@ h2 {
   height: 61px;
 }
 .footer-inner p {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--muted);
 }
 .footer-inner > a:last-child {
-  font-size: 11px;
+  font-size: 16px;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -791,7 +791,7 @@ h2 {
   gap: 20px;
   border-top: 1px solid var(--line);
   padding-block: 20px;
-  font-size: 9px;
+  font-size: 16px;
   color: var(--muted);
 }
 dialog {
@@ -814,14 +814,14 @@ dialog::backdrop {
   margin-bottom: 18px;
 }
 .dialog-toolbar h2 {
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0;
 }
 .dialog-toolbar button {
   border: 0;
   background: transparent;
   min-height: 44px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .dialog-close span {
   font-size: 23px;
@@ -842,7 +842,7 @@ dialog::backdrop {
   margin-top: 18px;
 }
 .dialog-bottom p {
-  font-size: 12px;
+  font-size: 16px;
   margin: 0;
 }
 .dialog-bottom > div {
@@ -881,10 +881,10 @@ dialog::backdrop {
     gap: 20px;
   }
   .product-config > span {
-    font-size: 7px;
+    font-size: 16px;
   }
   .product-config strong {
-    font-size: 12px;
+    font-size: 16px;
   }
   .product-image {
     padding: 23px;
@@ -920,7 +920,7 @@ dialog::backdrop {
     gap: 14px;
   }
   .actions .text-link {
-    font-size: 11px;
+    font-size: 16px;
   }
   .audience-inner {
     gap: 16px;
@@ -932,7 +932,7 @@ dialog::backdrop {
     text-align: center;
   }
   .audience-inner > span {
-    font-size: 14px;
+    font-size: 16px;
   }
   .section {
     padding-block: 75px;
@@ -942,7 +942,7 @@ dialog::backdrop {
   }
   .about-copy {
     padding-top: 33px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .about-copy .large-copy {
     font-size: 21px;
@@ -952,10 +952,10 @@ dialog::backdrop {
     margin-top: 20px;
   }
   .learning-steps h3 {
-    font-size: 15px;
+    font-size: 16px;
   }
   .learning-steps p {
-    font-size: 11px;
+    font-size: 16px;
   }
   .product-card {
     grid-template-columns: 1fr 1fr;
@@ -967,7 +967,7 @@ dialog::backdrop {
     font-size: 29px;
   }
   .product-copy > p:not(.eyebrow):not(.small-note) {
-    font-size: 12px;
+    font-size: 16px;
   }
   .product-config {
     flex-direction: column;
@@ -984,19 +984,19 @@ dialog::backdrop {
     grid-template-columns: 0.9fr 1.1fr;
   }
   .details-intro > p:not(.eyebrow) {
-    font-size: 12px;
+    font-size: 16px;
   }
   .spec-list > div {
     gap: 12px;
   }
   .spec-list dt {
-    font-size: 11px;
+    font-size: 16px;
   }
   .spec-list dd {
-    font-size: 12px;
+    font-size: 16px;
   }
   .spec-list dd.unconfirmed {
-    font-size: 10px;
+    font-size: 16px;
   }
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1037,7 +1037,7 @@ dialog::backdrop {
     background: transparent;
     border: 0;
     padding: 8px 0 8px 12px;
-    font-size: 11px;
+    font-size: 16px;
   }
   .menu-icon {
     display: block;
@@ -1075,13 +1075,13 @@ dialog::backdrop {
     grid-column: 1/-1;
   }
   .audience-inner > span {
-    font-size: 15px;
+    font-size: 16px;
   }
   .section {
     padding-block: 60px;
   }
   .eyebrow {
-    font-size: 9px;
+    font-size: 16px;
     letter-spacing: 1.3px;
     margin-bottom: 20px;
   }
@@ -1095,7 +1095,7 @@ dialog::backdrop {
   }
   .about-copy {
     padding-top: 0;
-    font-size: 13px;
+    font-size: 16px;
   }
   .desktop-break {
     display: none;
@@ -1117,14 +1117,14 @@ dialog::backdrop {
   }
   .learning-steps p {
     max-width: none;
-    font-size: 12px;
+    font-size: 16px;
   }
   .section-heading {
     display: block;
     margin-bottom: 30px;
   }
   .section-heading > p {
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 20px;
   }
   .section-heading > p br {
@@ -1147,7 +1147,7 @@ dialog::backdrop {
     font-size: 32px;
   }
   .product-copy > p:not(.eyebrow):not(.small-note) {
-    font-size: 13px;
+    font-size: 16px;
     max-width: none;
   }
   .product-config {
@@ -1155,10 +1155,10 @@ dialog::backdrop {
     gap: 30px;
   }
   .product-config > span {
-    font-size: 8px;
+    font-size: 16px;
   }
   .product-config strong {
-    font-size: 13px;
+    font-size: 16px;
   }
   .product-copy .button {
     width: 100%;
@@ -1168,17 +1168,17 @@ dialog::backdrop {
     gap: 36px;
   }
   .details-intro > p:not(.eyebrow) {
-    font-size: 13px;
+    font-size: 16px;
     max-width: 100%;
   }
   .spec-list dt {
-    font-size: 12px;
+    font-size: 16px;
   }
   .spec-list dd {
-    font-size: 13px;
+    font-size: 16px;
   }
   .spec-list dd.unconfirmed {
-    font-size: 11px;
+    font-size: 16px;
   }
   .gallery-grid {
     gap: 21px 14px;
@@ -1192,11 +1192,11 @@ dialog::backdrop {
     flex-wrap: wrap;
   }
   .gallery-filters button {
-    font-size: 10px;
+    font-size: 16px;
     padding: 7px 13px;
   }
   .gallery-item figcaption {
-    font-size: 10px;
+    font-size: 16px;
     display: block;
   }
   .gallery-item figcaption > span {
@@ -1227,7 +1227,7 @@ dialog::backdrop {
     margin-bottom: 24px;
   }
   .contact-inner > div > p:not(.eyebrow):not(.small-note) {
-    font-size: 13px;
+    font-size: 16px;
   }
   .contact-inner > div > p br {
     display: none;
@@ -1250,10 +1250,10 @@ dialog::backdrop {
     order: 3;
     width: 100%;
     margin: 0;
-    font-size: 11px;
+    font-size: 16px;
   }
   .footer-bottom {
-    font-size: 8px;
+    font-size: 16px;
     gap: 10px;
   }
   .footer-bottom > span:last-child {
@@ -1264,7 +1264,7 @@ dialog::backdrop {
     padding-top: 25px;
   }
   .dialog-bottom p {
-    font-size: 11px;
+    font-size: 16px;
   }
   .dialog-bottom > div {
     flex-shrink: 0;

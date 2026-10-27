@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yana-drones.github.io/yana/sitemap.xml

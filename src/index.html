@@ -6,14 +6,16 @@
     <meta name="theme-color" content="#faf8f5" />
     <meta
       name="description"
-      content="Meet YANA, an educational drone venture bringing hands-on quadcopter learning to colleges, robotics clubs, makerspaces and students. Request a demo or custom quote."
+      content="Explore educational quadcopters and hands-on drone-building workshops with YANA. Discuss a demo, custom quote or workshop partnership for your institution."
     />
-    <title>YANA — Make learning take flight.</title>
+    <title>YANA | Educational Drones &amp; Drone Workshops</title>
+    <!-- SEO_HEAD -->
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="hero.css" />
+    <link rel="stylesheet" href="readability.css" />
     <script type="module" src="app.js"></script>
   </head>
   <body>
@@ -34,7 +36,10 @@
         <nav id="navigation" aria-label="Main navigation">
           <a href="#about">Our approach</a>
           <a href="#product">The quadcopter</a>
+          <a href="shop/">Shop</a>
           <a href="#gallery">Gallery</a>
+          <a href="drone-workshops/">Workshops</a>
+          <a href="blog/">Blog</a>
           <a class="nav-contact" href="#contact"
             >Let’s talk <span aria-hidden="true">↗</span></a
           >
@@ -46,9 +51,6 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-layout">
           <div class="hero-copy">
-            <p class="hero-eyebrow">
-              <span aria-hidden="true"></span> HANDS-ON DRONE LEARNING
-            </p>
             <h1 id="hero-title">
               Learn it.<br />Explore it.<br /><em>Take flight.</em>
             </h1>
@@ -69,7 +71,6 @@
               >
             </div>
             <div class="hero-note">
-              <span class="hero-note-mark" aria-hidden="true">+</span>
               <p>
                 From classroom concepts<br /><strong
                   >to hands-on understanding.</strong
@@ -79,43 +80,29 @@
           </div>
           <figure
             class="hero-artwork"
-            aria-label="YANA educational quadcopter and proposed configuration"
+            aria-label="YANA educational quadcopter prototype and proposed configuration"
           >
-            <div class="hero-artwork-top">
-              <span>THE YANA QUADCOPTER</span
-              ><span class="hero-model-number" aria-hidden="true">01</span>
-            </div>
             <div class="hero-stage">
               <div class="hero-orbits" aria-hidden="true">
                 <span></span><span></span><span></span>
               </div>
-              <span class="hero-coordinate coordinate-top" aria-hidden="true"
-                >+</span
-              ><span
-                class="hero-coordinate coordinate-bottom"
-                aria-hidden="true"
-                >+</span
-              >
               <div class="hero-media"><!-- HERO_MEDIA --></div>
-              <span class="hero-stage-caption"
-                >A NEW PERSPECTIVE ON LEARNING</span
-              >
             </div>
             <figcaption class="hero-specs">
-              <div class="hero-specs-label">
-                <span aria-hidden="true"></span> PROPOSED<br />CONFIGURATION
-              </div>
+              <div class="hero-specs-label">Proposed configuration</div>
               <dl>
                 <div>
-                  <dt>FRAME</dt>
+                  <dt>Frame</dt>
                   <dd>F450</dd>
                 </div>
                 <div>
-                  <dt>FLIGHT CONTROLLER</dt>
+                  <dt>Flight controller</dt>
                   <dd>Pixhawk 2.4.8</dd>
                 </div>
               </dl>
-              <a href="#details" aria-label="Explore the proposed configuration"
+              <a
+                href="educational-drone/"
+                aria-label="View drone technical details"
                 ><span aria-hidden="true">↗</span></a
               >
             </figcaption>
@@ -123,11 +110,20 @@
         </div>
       </section>
 
-      <div class="audience-strip">
-        <div class="container audience-inner">
-          <p>ROOM TO EXPLORE.<br /><strong>WHEREVER YOU LEARN.</strong></p>
-          <span>Colleges</span><span>Robotics clubs</span
-          ><span>Makerspaces</span><span>Students</span>
+      <div
+        class="audience-strip"
+        role="group"
+        aria-label="For colleges, robotics clubs, makerspaces and students"
+      >
+        <div class="audience-marquee" aria-hidden="true">
+          <div class="audience-track">
+            <span>Colleges</span><i>·</i><span>Robotics clubs</span><i>·</i
+            ><span>Makerspaces</span><i>·</i><span>Students</span><i>·</i>
+          </div>
+          <div class="audience-track">
+            <span>Colleges</span><i>·</i><span>Robotics clubs</span><i>·</i
+            ><span>Makerspaces</span><i>·</i><span>Students</span><i>·</i>
+          </div>
         </div>
       </div>
 
@@ -137,9 +133,6 @@
         aria-labelledby="about-title"
       >
         <div>
-          <p class="eyebrow">
-            <span class="section-number">01</span> THE IDEA BEHIND YANA
-          </p>
           <h2 id="about-title">
             Less just reading.<br /><span class="muted-heading"
               >More figuring it out.</span
@@ -166,17 +159,14 @@
         </div>
         <div class="learning-steps">
           <div>
-            <span class="step-number">01 / EXPLORE</span>
             <h3>See how it fits.</h3>
             <p>Get to know the parts and the role each one plays.</p>
           </div>
           <div>
-            <span class="step-number">02 / CONNECT</span>
             <h3>Bring ideas together.</h3>
             <p>Connect classroom concepts with a physical system.</p>
           </div>
           <div>
-            <span class="step-number">03 / DISCOVER</span>
             <h3>Keep asking why.</h3>
             <p>Make observation and experimentation part of learning.</p>
           </div>
@@ -191,24 +181,25 @@
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">
-                <span class="section-number">02</span> MEET YOUR STARTING POINT
-              </p>
               <h2 id="product-title">
-                One quadcopter.<br />A world of questions.
+                An educational quadcopter.<br />Built around learning.
               </h2>
             </div>
             <p>Our first offering.<br />Your next hands-on project.</p>
           </div>
           <article class="product-card">
             <div class="product-image">
-              <span class="image-label">THE EDUCATIONAL QUADCOPTER</span
-              ><!-- PRODUCT_MEDIA --><span class="image-caption"
-                >A closer look at hands-on learning.</span
+              <!-- PRODUCT_MEDIA --><a
+                class="product-image-link text-link"
+                href="educational-drone/"
+                >View the drone &amp; technical details
+                <span aria-hidden="true">↗</span></a
               >
+              <p class="prototype-note">
+                Prototype shown. Final configuration is confirmed in your quote.
+              </p>
             </div>
             <div class="product-copy">
-              <p class="eyebrow">BY YANA</p>
               <h3>Educational<br />Quadcopter</h3>
               <p>
                 A practical introduction to drone systems. Explore the
@@ -220,8 +211,8 @@
                 ><span>Makerspaces</span><span>Students</span>
               </div>
               <div class="product-config">
-                <span>PROPOSED FRAME <strong>F450</strong></span
-                ><span>PROPOSED CONTROLLER <strong>Pixhawk 2.4.8</strong></span>
+                <span>Proposed frame <strong>F450</strong></span
+                ><span>Proposed controller <strong>Pixhawk 2.4.8</strong></span>
               </div>
               <a
                 class="button button-primary"
@@ -243,9 +234,6 @@
         aria-labelledby="details-title"
       >
         <div class="details-intro">
-          <p class="eyebrow">
-            <span class="section-number">03</span> UNDER THE SURFACE
-          </p>
           <h2 id="details-title">A clear view<br />of the setup.</h2>
           <p>
             The F450 frame and Pixhawk 2.4.8 flight controller form the proposed
@@ -299,12 +287,7 @@
         <div class="container">
           <div class="section-heading">
             <div>
-              <p class="eyebrow">
-                <span class="section-number">04</span> THROUGH THE LENS
-              </p>
-              <h2 id="gallery-title">
-                A little closer.<br />A lot more to explore.
-              </h2>
+              <h2 id="gallery-title">Explore the prototype.</h2>
             </div>
             <p>Real perspectives on the<br />YANA quadcopter.</p>
           </div>
@@ -333,6 +316,78 @@
           >
         </div>
       </section>
+      <section
+        id="workshops"
+        class="section container workshop-section"
+        aria-labelledby="workshop-title"
+      >
+        <div class="section-heading">
+          <div>
+            <h2 id="workshop-title">
+              Bring hands-on drone learning<br />to your institution.
+            </h2>
+          </div>
+          <a class="text-link" href="drone-workshops/"
+            >Explore workshops <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="workshop-layout">
+          <div>
+            <p class="large-copy">
+              Partner with YANA for drone-making and drone-development
+              workshops.
+            </p>
+            <p>
+              Tell us what your students want to learn. We’ll discuss an
+              appropriate programme with you, from identifying components and
+              understanding assembly to development exercises and
+              professional-led training.
+            </p>
+            <p>
+              The agenda, facilitator, equipment, group size and any
+              demonstration are agreed in a written proposal. Instructor
+              credentials and availability will be shared for your review.
+            </p>
+            <a class="button button-primary" href="partnerships/"
+              >Discuss a Partnership <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="workshop-topics">
+            <h3>Plan a programme around your goals</h3>
+            <ul>
+              <li>Drone components, airframes and electronics</li>
+              <li>Supervised assembly and development activities</li>
+              <li>Flight-control concepts and simulation</li>
+              <li>Learning support for faculty and student teams</li>
+            </ul>
+            <p>
+              For colleges, robotics clubs, makerspaces and suitable student
+              groups. Final scope and pricing are confirmed individually.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="learn"
+        class="section learning-library"
+        aria-labelledby="learn-title"
+      >
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <h2 id="learn-title">Learn more about drones.</h2>
+              <p>
+                Practical guides for learners, workshop organisers and
+                first-time buyers.
+              </p>
+            </div>
+            <a class="text-link" href="blog/"
+              >Browse the learning library <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <!-- FEATURED_POSTS -->
+        </div>
+      </section>
 
       <section
         id="contact"
@@ -341,9 +396,6 @@
       >
         <div class="container contact-inner">
           <div>
-            <p class="eyebrow">
-              <span class="section-number">05</span> LET’S GET STARTED
-            </p>
             <h2 id="contact-title">
               Your next idea<br />could <em>take flight.</em>
             </h2>
@@ -363,25 +415,22 @@
               Demo requests and custom quotes start with a conversation.
             </p>
           </div>
-          <div class="contact-art" aria-hidden="true">
-            <span class="contact-ring ring-one"></span
-            ><span class="contact-ring ring-two"></span
-            ><span class="contact-ring ring-three"></span
-            ><span class="contact-spark">↗</span>
-          </div>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
+    <footer class="site-footer contact-footer">
       <div class="container footer-inner">
         <a class="brand" href="#" aria-label="YANA home"><!-- LOGO --></a>
-        <p>Curiosity, with a new perspective.</p>
+        <p>Educational drones.<br />Hands-on learning.</p>
+        <nav aria-label="Footer navigation">
+          <a href="shop/">Shop</a><a href="drone-workshops/">Workshops</a
+          ><a href="partnerships/">Partnerships</a><a href="blog/">Blog</a>
+        </nav>
         <a href="#main">Back to top <span aria-hidden="true">↑</span></a>
       </div>
       <div class="container footer-bottom">
         <span>© <span id="year">2026</span> YANA. All rights reserved.</span
-        ><span>Educational drones. Hands-on learning.</span>
+        ><a href="blog/">Learning library</a>
       </div>
     </footer>
 

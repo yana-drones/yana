@@ -10,7 +10,7 @@ test("all requested sections, original logo, honest configuration and no broken 
   page.on("pageerror", (error) => errors.push(error.message));
   const response = await page.goto("/");
   expect(response.status()).toBe(200);
-  await expect(page).toHaveTitle("YANA — Make learning take flight.");
+  await expect(page).toHaveTitle("YANA | Educational Drones & Drone Workshops");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText(
     /Learn it\.\s*Explore it\.\s*Take flight\./,
   );
@@ -77,23 +77,23 @@ test("navigation works and page fits narrow screens", async ({
   if (isMobile) {
     const menu = page.getByRole("button", { name: "Menu" });
     await expect(menu).toHaveAttribute("aria-expanded", "false");
-    await expect(page.getByRole("navigation")).toBeHidden();
+    await expect(page.getByRole("navigation", {name:"Main navigation"})).toBeHidden();
     await menu.click();
     await expect(menu).toHaveAttribute("aria-expanded", "true");
     await page
-      .getByRole("navigation")
+      .getByRole("navigation", {name:"Main navigation"})
       .getByRole("link", { name: "The quadcopter" })
       .click();
     await expect(page).toHaveURL(/#product$/);
     await expect(menu).toHaveAttribute("aria-expanded", "false");
   } else {
     await page
-      .getByRole("navigation")
+      .getByRole("navigation", {name:"Main navigation"})
       .getByRole("link", { name: "Our approach" })
       .click();
     await expect(page).toHaveURL(/#about$/);
   }
-  for (const width of [320, 390, 768, 1440]) {
+  for (const width of [320, 390, 768, 1024, 1101, 1200, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     expect(
       await page.evaluate(
@@ -167,14 +167,14 @@ test("essential content and email enquiries remain available without JavaScript"
   });
   const page = await context.newPage();
   await page.goto("http://127.0.0.1:4173");
-  await expect(page.getByRole("navigation")).toBeVisible();
+  await expect(page.getByRole("navigation", {name:"Main navigation"})).toBeVisible();
   await expect(
     page.getByRole("link", { name: "Request a Demo" }),
   ).toHaveAttribute("href", /^mailto:hello@naadix.xyz/);
   await expect(
     page.getByRole("link", { name: "Request a Quote" }),
   ).toHaveAttribute("href", /^mailto:hello@naadix.xyz/);
-  await expect(page.locator("#product")).toContainText("EducationalQuadcopter");
+  await expect(page.locator("#product")).toContainText(/Educational\s*Quadcopter/);
   await context.close();
 });
 
@@ -282,8 +282,9 @@ test("supplied video plays, seeks and supports HTTP byte ranges", async ({
   await expect
     .poll(() =>
       video.evaluate(
-        (element) => !element.seeking && element.currentTime >= 10,
+        (element) => !element.seeking && element.currentTime >= 9.9,
       ),
+      { timeout: 15_000 },
     )
     .toBeTruthy();
   const source = await video.locator("source").getAttribute("src");

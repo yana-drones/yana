@@ -1,0 +1,482 @@
+[
+  {
+    "slug": "how-a-quadcopter-works",
+    "title": "How a quadcopter works: follow the energy and information",
+    "description": "Understand a quadcopter by tracing battery power, sensor measurements and motor commands through one system.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "drone-component-functions",
+    "title": "Drone components explained by the questions they answer",
+    "description": "Learn the roles of frames, motors, ESCs, sensors and controllers using a functional component worksheet.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "roll-pitch-yaw-explained",
+    "title": "Roll, pitch and yaw: describe drone rotation clearly",
+    "description": "Separate attitude from movement using a paper quadcopter and a clear body-axis convention.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "quadcopter-thrust-and-weight",
+    "title": "Thrust and weight: a classroom force diagram for quadcopters",
+    "description": "Use a simple force balance to distinguish hovering, acceleration and tilted thrust without promising performance.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "body-frame-world-frame",
+    "title": "Body frame and world frame: why a drone direction needs a reference",
+    "description": "Understand body-fixed and earth-fixed directions with a floor-map exercise and explicit axis labels.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "sensor-measurement-estimate-difference",
+    "title": "Measurement, estimate and command: three different drone data types",
+    "description": "Read drone dashboards more accurately by separating sensor measurements, state estimates and requested outputs.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "ground-station-and-radio-control",
+    "title": "Ground station, radio control and telemetry: understand the separate roles",
+    "description": "Map operator commands and telemetry without confusing a ground-station connection with a complete control system.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "educational-drone-learning-path",
+    "title": "A practical learning path from drone components to evidence",
+    "description": "Plan a progression through component identification, mechanics, sensing, simulation and documented analysis.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "drone-specification-evidence",
+    "title": "How to read a drone specification without confusing proposals and test results",
+    "description": "Distinguish proposed configurations, component ratings, calculations and measured aircraft performance.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "mavlink-telemetry-basics",
+    "title": "What MAVLink does in a drone learning system",
+    "description": "Understand MAVLink messages, endpoints and data interpretation before writing any drone-control software.",
+    "category": "Drone fundamentals"
+  },
+  {
+    "slug": "f450-frame-learning-guide",
+    "title": "What an F450-style frame can teach about drone design",
+    "description": "Explore an F450-style frame through geometry, load paths and mounting space while keeping build-specific details separate.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "quadcopter-x-plus-geometry",
+    "title": "X and plus quadcopter geometry: why the front direction matters",
+    "description": "Compare X and plus layouts using a paper geometry exercise and understand why firmware geometry must match hardware.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "drone-centre-of-mass",
+    "title": "Find a drone model’s centre of mass with a simple worksheet",
+    "description": "Calculate centre of mass using a clearly labelled classroom example and compare alternative component positions.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "drone-frame-stiffness",
+    "title": "Frame stiffness and flexibility: learn with a cardboard beam",
+    "description": "Compare deflection and geometry using classroom beams, without treating a simple experiment as an aircraft strength test.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "vibration-isolation-concepts",
+    "title": "Why drone vibration isolation is more than adding soft foam",
+    "description": "Understand vibration paths, isolation and cable bypasses through a simple unpowered model.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "flight-controller-mounting-orientation",
+    "title": "Flight-controller mounting: distinguish physical orientation from software interpretation",
+    "description": "Study controller orientation and sensor-frame alignment with labelled paper models before touching configuration.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "drone-cable-routing",
+    "title": "Cable routing for educational drones: clarity, strain and inspection",
+    "description": "Plan cable routes on a disconnected model while considering mechanical strain, identity and interference paths.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "drone-electronics-layout",
+    "title": "Plan a drone electronics layout before assembling hardware",
+    "description": "Compare controller, receiver and power-system placement with paper templates and explicit design trade-offs.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "drone-serviceability-design",
+    "title": "Design an educational drone for inspection and component replacement",
+    "description": "Use a component-removal exercise to evaluate labels, access, documentation and maintenance-friendly layout.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "drone-frame-inspection",
+    "title": "Document a drone frame inspection without guessing acceptance limits",
+    "description": "Create an observation-led frame inspection record that separates visible condition from operational acceptance.",
+    "category": "Frames and mechanics"
+  },
+  {
+    "slug": "flight-controller-role",
+    "title": "What a flight controller does between sensing and motor commands",
+    "description": "Follow the controller’s estimation, comparison and allocation jobs through a simple paper feedback loop.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "pixhawk-248-compatibility-questions",
+    "title": "Pixhawk 2.4.8: questions to resolve before planning a lesson",
+    "description": "Build an evidence-based compatibility checklist for a proposed Pixhawk 2.4.8 rather than assuming current firmware support.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "gyroscope-bias-classroom",
+    "title": "Gyroscope bias: why a stationary sensor can suggest rotation",
+    "description": "Explore angular-rate bias and accumulated angle error with an original spreadsheet exercise.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "accelerometer-gravity-motion",
+    "title": "Why a resting accelerometer does not simply read zero",
+    "description": "Distinguish accelerometer measurements, gravity and estimated motion using a stationary orientation thought experiment.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "sensor-fusion-introduction",
+    "title": "Sensor fusion explained with two uncertain classroom measurements",
+    "description": "Use a simple weighted-estimate exercise to understand why flight systems combine complementary sensor information.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "barometer-altitude-reference",
+    "title": "Barometers and drone altitude: pressure needs a reference",
+    "description": "Understand why pressure-derived height, height above home and terrain clearance are different quantities.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "drone-compass-interference",
+    "title": "Drone compass data: heading, interference and evidence",
+    "description": "Distinguish heading from direction of travel and build a careful magnetic-sensor observation worksheet.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "motor-output-mapping-concepts",
+    "title": "Motor output mapping: separate location, command and connector",
+    "description": "Understand why physical motor positions, logical motor numbers and controller outputs require a documented mapping.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "flight-controller-configuration-backups",
+    "title": "Configuration backups: keep hardware, firmware and context together",
+    "description": "Create a meaningful configuration archive with version identity, change notes and limits on reuse.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "flight-controller-sensor-inspection",
+    "title": "Plan a props-off sensor observation lesson",
+    "description": "Prepare an expected-versus-observed worksheet for supervised sensor checks using the correct controller documentation.",
+    "category": "Flight controllers"
+  },
+  {
+    "slug": "battery-capacity-energy-units",
+    "title": "Battery capacity and energy: understand mAh, Ah and Wh",
+    "description": "Use fictional battery labels to compare charge and energy without turning arithmetic into a flight-time promise.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "battery-voltage-sag",
+    "title": "Battery voltage sag: interpret a changing voltage trace",
+    "description": "Read fictional voltage and current data to distinguish a load-related change from a remaining-energy claim.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "esc-role-in-quadcopter",
+    "title": "What an ESC does in a quadcopter propulsion system",
+    "description": "Understand the electronic speed controller’s power, command and optional telemetry roles.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "pwm-dshot-concept-comparison",
+    "title": "PWM and DShot: compare ESC command concepts",
+    "description": "Compare pulse-width and digital ESC command ideas without assuming a particular board or output supports them.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "motor-kv-explained",
+    "title": "Motor KV explained: what the number can and cannot tell you",
+    "description": "Interpret a motor speed constant without confusing it with power, torque or actual propeller-loaded speed.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "propeller-diameter-pitch",
+    "title": "Propeller diameter and pitch: read the geometry before the label",
+    "description": "Understand diameter, blade angle and manufacturer naming without confusing a propeller code with guaranteed travel or thrust.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "motor-propeller-data-comparison",
+    "title": "Compare motor and propeller test data without losing the conditions",
+    "description": "Build a comparison worksheet that keeps test setup, units, operating points and uncertainty beside each result.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "connector-compatibility-checklist",
+    "title": "A connector fitting does not prove electrical compatibility",
+    "description": "Use a paper interface matrix to distinguish connector shape, pinout, voltage, signal and firmware compatibility.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "thrust-to-weight-explained",
+    "title": "Thrust-to-weight ratio: a useful model with important limits",
+    "description": "Calculate a fictional thrust-to-weight ratio while keeping force units, conditions and payload claims separate.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "drone-power-budget-worksheet",
+    "title": "Build a drone power budget without guessing flight time",
+    "description": "Separate power rails, conversion losses and measured demand in a fictional educational power-budget spreadsheet.",
+    "category": "Power and propulsion"
+  },
+  {
+    "slug": "organise-college-drone-workshop",
+    "title": "How to organise a college drone-building workshop",
+    "description": "A practical planning sequence for a college drone workshop, from learning goals and equipment to responsibilities and follow-up.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "drone-workshop-agenda-design",
+    "title": "Design a drone workshop agenda around learning evidence",
+    "description": "Build a provisional workshop agenda that gives explanation, practical tasks, review and handover their own place.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "drone-workshop-venue-checklist",
+    "title": "Prepare a venue for a hands-on drone workshop",
+    "description": "Review workbenches, visibility, computers, access and activity boundaries before confirming a drone education venue.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "drone-workshop-budget-planning",
+    "title": "Build a realistic drone workshop budget without guessed prices",
+    "description": "A budget structure for institutional drone workshops that separates delivery, equipment, travel and follow-up responsibilities.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "drone-workshop-materials-allocation",
+    "title": "Allocate tools and components for a shared drone workshop",
+    "description": "Plan equipment quantities around learner roles and tasks, with a clear record of tools, shared components and ownership.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "choose-drone-workshop-facilitator",
+    "title": "Questions to ask a drone workshop facilitator",
+    "description": "Assess a facilitator through teaching plans, relevant experience, activity boundaries and evidence rather than unsupported credentials.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "mixed-experience-drone-workshop",
+    "title": "Plan a drone workshop for learners with mixed experience",
+    "description": "Use a common task, optional extensions and rotating roles to keep a mixed-skill drone learning group involved.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "drone-demonstration-backup-plan",
+    "title": "Prepare a useful backup plan for a drone demonstration",
+    "description": "Keep a workshop valuable when a demonstration cannot proceed, using diagrams, recorded evidence and structured investigation.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "drone-workshop-brief-template",
+    "title": "What to put in an institutional drone workshop enquiry",
+    "description": "Prepare a clear enquiry that helps a workshop provider scope learner tasks, equipment, facilitators and delivery responsibilities.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "drone-workshop-follow-up-plan",
+    "title": "Turn a one-off drone workshop into continued learning",
+    "description": "Plan a practical follow-up using learner outputs, documentation questions and a small next project rather than broad promises.",
+    "category": "Workshop planning"
+  },
+  {
+    "slug": "scope-college-drone-capstone",
+    "title": "Choose a manageable scope for a college drone capstone",
+    "description": "Define a college drone project around one engineering question, testable evidence and a realistic stopping point.",
+    "category": "College projects"
+  },
+  {
+    "slug": "college-drone-requirements-document",
+    "title": "Write a requirements document for a student quadcopter project",
+    "description": "Separate requirements, design decisions and assumptions in a student drone project, with a simple verification matrix.",
+    "category": "College projects"
+  },
+  {
+    "slug": "college-drone-project-notebook",
+    "title": "Keep an engineering notebook for a drone learning project",
+    "description": "Record observations, decisions, versions and unresolved questions so your drone project can be understood and continued.",
+    "category": "College projects"
+  },
+  {
+    "slug": "student-quadcopter-wiring-documentation",
+    "title": "Document quadcopter connections without relying on cable colours",
+    "description": "Create a readable connection reference using component identifiers, connector views and verified documentation.",
+    "category": "College projects"
+  },
+  {
+    "slug": "quadcopter-frame-design-tradeoffs",
+    "title": "Study quadcopter frame trade-offs as a student project",
+    "description": "Compare educational frame layouts through access, documentation, assembly and measurement rather than unsupported performance claims.",
+    "category": "College projects"
+  },
+  {
+    "slug": "student-drone-data-analysis-project",
+    "title": "Plan a drone data-analysis project with honest evidence",
+    "description": "Choose a narrow analysis question, preserve dataset provenance and distinguish recorded aircraft data from simulation.",
+    "category": "College projects"
+  },
+  {
+    "slug": "student-drone-bench-validation",
+    "title": "Plan bench validation for a student drone project",
+    "description": "Use staged, supervised evidence checks to review documentation and assembly before considering more complex activities.",
+    "category": "College projects"
+  },
+  {
+    "slug": "student-drone-design-review",
+    "title": "Run a useful design review for a student drone project",
+    "description": "Structure a design review around evidence, assumptions and decisions so feedback leads to a manageable action list.",
+    "category": "College projects"
+  },
+  {
+    "slug": "student-drone-project-report",
+    "title": "Write a clear report for an educational drone project",
+    "description": "Explain your project question, methods, evidence and limitations without overstating what a prototype or dataset proves.",
+    "category": "College projects"
+  },
+  {
+    "slug": "semester-drone-project-plan",
+    "title": "Plan a semester-long educational drone project",
+    "description": "Build a staged semester plan with evidence checkpoints, scope decisions and a usable handover rather than a last-week rush.",
+    "category": "College projects"
+  },
+  {
+    "slug": "drone-learning-outcomes-for-beginners",
+    "title": "Write clear learning outcomes for an introductory drone lesson",
+    "description": "Turn broad drone education aims into observable explanations, diagrams and review tasks suitable for beginning learners.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "teach-quadcopter-components",
+    "title": "Teach quadcopter components through the questions they answer",
+    "description": "Introduce frames, motors, ESCs and flight controllers through a readable system map and a simple learner explanation task.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "teach-drone-system-thinking",
+    "title": "Use a quadcopter to teach systems thinking",
+    "description": "Help learners trace relationships, assumptions and evidence across a quadcopter rather than treating components as isolated facts.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "drone-team-role-rotation",
+    "title": "Rotate roles so every learner contributes to a drone project",
+    "description": "Design meaningful observer, checker, recorder and explainer roles for shared educational drone equipment.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "drone-lesson-formative-assessment",
+    "title": "Check drone learning before the final presentation",
+    "description": "Use short explanations, diagrams and evidence checks to identify confusion during a drone lesson or project.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "drone-learning-misconceptions",
+    "title": "Common drone-learning misconceptions to address early",
+    "description": "Clarify the difference between components, configuration and evidence so beginners avoid misleading assumptions about drones.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "accessible-drone-learning-activities",
+    "title": "Make hands-on drone learning easier to access",
+    "description": "Plan readable materials, visible demonstrations and flexible participation so more learners can contribute meaningfully.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "simulation-drone-learning-lesson",
+    "title": "Plan a drone-learning lesson using simulation",
+    "description": "Use a simulator for a focused prediction or observation lesson while keeping software-model evidence separate from real-aircraft claims.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "constructive-feedback-drone-projects",
+    "title": "Give feedback that improves a student drone project",
+    "description": "Focus project feedback on claims, evidence and next actions so learners can revise their reasoning without uncontrolled scope growth.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "map-drone-lessons-to-curriculum",
+    "title": "Connect drone activities to an existing curriculum",
+    "description": "Map a drone lesson to specific course outcomes and assessment evidence without claiming affiliation or automatic curriculum approval.",
+    "category": "Teaching and learning"
+  },
+  {
+    "slug": "compare-educational-drone-proposals",
+    "title": "Compare educational drone proposals on useful evidence",
+    "description": "Evaluate educational quadcopter offers through learning fit, configuration, inclusions and support rather than headline specifications.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "educational-drone-package-checklist",
+    "title": "What should an educational drone quotation include?",
+    "description": "Check the actual aircraft, accessories, software, documents and services in an educational quadcopter quote.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "f450-pixhawk-educational-configuration",
+    "title": "Understand YANA’s proposed F450 and Pixhawk 2.4.8 configuration",
+    "description": "Learn what the proposed frame and controller names tell you, what they do not establish and which details to confirm with YANA.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "educational-drone-total-cost",
+    "title": "Understand the total cost of owning an educational drone",
+    "description": "Plan for equipment, documentation, supervision, maintenance and storage without inventing prices or assuming support terms.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "educational-drone-procurement-specification",
+    "title": "Write an educational drone procurement brief",
+    "description": "Describe learning needs, evidence, package boundaries and acceptance questions in a clear institutional purchase brief.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "evaluate-educational-drone-demo",
+    "title": "What to look for in an educational drone demonstration",
+    "description": "Use a demo to inspect learning fit, documentation and actual evidence without treating a single event as proof of every claim.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "educational-drone-software-compatibility",
+    "title": "Check software compatibility before buying an educational drone",
+    "description": "Ask for exact board identity, supported firmware, computer requirements and a maintained configuration record.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "educational-drone-training-support",
+    "title": "Agree training and support for an educational drone purchase",
+    "description": "Define the learners, practical scope, facilitator, retained materials and follow-up terms before assuming training is included.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "educational-drone-handover-checklist",
+    "title": "Create a clear handover record for an educational drone",
+    "description": "Check supplied items, configuration documents, unresolved issues and institutional ownership when educational drone equipment arrives.",
+    "category": "Buying an educational drone"
+  },
+  {
+    "slug": "request-educational-drone-quote",
+    "title": "How to request a useful educational drone quote from YANA",
+    "description": "Share your educational goals, users and resource questions so YANA can discuss a scoped configuration and itemised proposal.",
+    "category": "Buying an educational drone"
+  }
+]

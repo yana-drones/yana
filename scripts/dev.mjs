@@ -33,7 +33,12 @@ function schedule() {
 }
 const watchers = [
   watch(root, (_, name) => {
-    if (["styles.css", "hero.css", "app.js"].includes(String(name))) schedule();
+    if (
+      ["styles.css", "hero.css", "readability.css", "app.js"].includes(
+        String(name),
+      )
+    )
+      schedule();
   }),
   watch(path.join(root, "assets"), { recursive: true }, schedule),
   watch(path.join(root, "src"), { recursive: true }, schedule),

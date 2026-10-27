@@ -14,6 +14,8 @@ const types = {
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
   ".webp": "image/webp",
   ".svg": "image/svg+xml",
   ".png": "image/png",
@@ -32,7 +34,7 @@ export function startServer(port = Number(process.env.PORT || 4173)) {
       const pathname = decodeURIComponent(url.pathname);
       const file = path.resolve(
         root,
-        `.${pathname === "/" ? "/index.html" : pathname}`,
+        `.${pathname.endsWith("/") ? pathname + "index.html" : pathname}`,
       );
       if (!file.startsWith(root + path.sep)) {
         response.writeHead(403);
